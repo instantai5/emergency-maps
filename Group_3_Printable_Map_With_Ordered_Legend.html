@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d070c01d67238fad8fe68377435dfe06 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 300px; height: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; padding: 10px;'><b>Group 3 Members (North to South)</b><br><hr style='margin:4px 0;'><b>1</b>. Pattison, Susan Beth<br><b>2</b>. Berry, Kylie<br><b>3</b>. Bowen, Darryl James<br><b>4</b>. West, Scott & Allisyn Ann<br><b>5</b>. French, Therin & Valerie Jayne<br><b>6</b>. Turk, George Francis<br><b>7</b>. Echols, Daniel & Karen Marguerite<br><b>8</b>. Ellison, Ammon & Megan Chelsea<br></div>
+    
+            <div class="folium-map" id="map_d070c01d67238fad8fe68377435dfe06" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d070c01d67238fad8fe68377435dfe06 = L.map(
+                "map_d070c01d67238fad8fe68377435dfe06",
+                {
+                    center: [27.143356975, -82.39346122499998],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_37ef19429c575d8bc0bd3f2e5bb1c3b1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var polygon_737daa7f2d2a7e759e18cff786ee819c = L.polygon(
+                [[27.136275, -82.388353], [27.1398103, -82.3970929], [27.1589548, -82.4034659], [27.1524915, -82.3955558999999], [27.1402339, -82.3879102], [27.136275, -82.388353]],
+                {"bubblingMouseEvents": true, "color": "#73ac2f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#73ac2f", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+        var popup_43bb454eb4f331ca41ace2551421e691 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7f275d256232d595a441e878e14c71e = $(`<div id="html_a7f275d256232d595a441e878e14c71e" style="width: 100.0%; height: 100.0%;">Group 3 Boundary</div>`)[0];
+            popup_43bb454eb4f331ca41ace2551421e691.setContent(html_a7f275d256232d595a441e878e14c71e);
+        
+
+        polygon_737daa7f2d2a7e759e18cff786ee819c.bindPopup(popup_43bb454eb4f331ca41ace2551421e691)
+        ;
+
+        
+    
+    
+            var marker_6292141dc42abed25e3dc1e8b2798fdd = L.marker(
+                [27.1589548, -82.4034659],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_9b8be0b1a95bdf8125e698b9eb9b6987 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n                "});
+            marker_6292141dc42abed25e3dc1e8b2798fdd.setIcon(div_icon_9b8be0b1a95bdf8125e698b9eb9b6987);
+        
+    
+        var popup_c3032e8816c6034a797b76c427395ec7 = L.popup({"maxWidth": 300});
+
+        
+            var html_45c26557e637eaff67271bce94b21b5f = $(`<div id="html_45c26557e637eaff67271bce94b21b5f" style="width: 100.0%; height: 100.0%;"><b>1. Pattison, Susan Beth</b><br>3580 Rustic Road Nokomis, Florida 34275</div>`)[0];
+            popup_c3032e8816c6034a797b76c427395ec7.setContent(html_45c26557e637eaff67271bce94b21b5f);
+        
+
+        marker_6292141dc42abed25e3dc1e8b2798fdd.bindPopup(popup_c3032e8816c6034a797b76c427395ec7)
+        ;
+
+        
+    
+    
+            var marker_67681f9c332835b4da701e80b784bce0 = L.marker(
+                [27.1524915, -82.3955558999999],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_b2d49c9fa53c536ee87481111d822466 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n                "});
+            marker_67681f9c332835b4da701e80b784bce0.setIcon(div_icon_b2d49c9fa53c536ee87481111d822466);
+        
+    
+        var popup_5436b87986892528ce9b61612f8015fd = L.popup({"maxWidth": 300});
+
+        
+            var html_8711c5a285a780caac889f8cf13bd637 = $(`<div id="html_8711c5a285a780caac889f8cf13bd637" style="width: 100.0%; height: 100.0%;"><b>2. Berry, Kylie</b><br>196 Villoresi Blvd North Venice, Florida 34275-1973</div>`)[0];
+            popup_5436b87986892528ce9b61612f8015fd.setContent(html_8711c5a285a780caac889f8cf13bd637);
+        
+
+        marker_67681f9c332835b4da701e80b784bce0.bindPopup(popup_5436b87986892528ce9b61612f8015fd)
+        ;
+
+        
+    
+    
+            var marker_de74905afce9f7940d2f8838420ed3b2 = L.marker(
+                [27.1402339, -82.3879102],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_7626c3d39ae9dc4f6d48335e321f936a = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n                "});
+            marker_de74905afce9f7940d2f8838420ed3b2.setIcon(div_icon_7626c3d39ae9dc4f6d48335e321f936a);
+        
+    
+        var popup_0315f79f6ad574fd836fdf0ba1fd17a9 = L.popup({"maxWidth": 300});
+
+        
+            var html_4f3bc056894e93883d9954c585b719a3 = $(`<div id="html_4f3bc056894e93883d9954c585b719a3" style="width: 100.0%; height: 100.0%;"><b>3. Bowen, Darryl James</b><br>1251 CIELO CT NORTH VENICE, Florida 34275</div>`)[0];
+            popup_0315f79f6ad574fd836fdf0ba1fd17a9.setContent(html_4f3bc056894e93883d9954c585b719a3);
+        
+
+        marker_de74905afce9f7940d2f8838420ed3b2.bindPopup(popup_0315f79f6ad574fd836fdf0ba1fd17a9)
+        ;
+
+        
+    
+    
+            var marker_5cb9910d3570e93ff60e01678f52027a = L.marker(
+                [27.1401434, -82.3889222],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_7f255fd128596217fc9146ca11d5e372 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n                "});
+            marker_5cb9910d3570e93ff60e01678f52027a.setIcon(div_icon_7f255fd128596217fc9146ca11d5e372);
+        
+    
+        var popup_35d7ce57dffcd6a8c1f8df667152cd0d = L.popup({"maxWidth": 300});
+
+        
+            var html_81313fa9b419363fd7d2a30bcc7f7f31 = $(`<div id="html_81313fa9b419363fd7d2a30bcc7f7f31" style="width: 100.0%; height: 100.0%;"><b>4. West, Scott & Allisyn Ann</b><br>1093 ANCORA BLVD NORTH VENICE, Florida 34275</div>`)[0];
+            popup_35d7ce57dffcd6a8c1f8df667152cd0d.setContent(html_81313fa9b419363fd7d2a30bcc7f7f31);
+        
+
+        marker_5cb9910d3570e93ff60e01678f52027a.bindPopup(popup_35d7ce57dffcd6a8c1f8df667152cd0d)
+        ;
+
+        
+    
+    
+            var marker_206154a180e241985a2c2ae22ec3229f = L.marker(
+                [27.1398103, -82.3970929],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_eac11ad2f8e0af1a0a7d5d95e8387f5f = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n                "});
+            marker_206154a180e241985a2c2ae22ec3229f.setIcon(div_icon_eac11ad2f8e0af1a0a7d5d95e8387f5f);
+        
+    
+        var popup_c8d43f3c49c1ce60c265333e886c13f1 = L.popup({"maxWidth": 300});
+
+        
+            var html_96c339e59714faf26157075180e2a41f = $(`<div id="html_96c339e59714faf26157075180e2a41f" style="width: 100.0%; height: 100.0%;"><b>5. French, Therin & Valerie Jayne</b><br>800 Treviso Grand Cir Unit 106 Nokomis, Florida 34275-3496</div>`)[0];
+            popup_c8d43f3c49c1ce60c265333e886c13f1.setContent(html_96c339e59714faf26157075180e2a41f);
+        
+
+        marker_206154a180e241985a2c2ae22ec3229f.bindPopup(popup_c8d43f3c49c1ce60c265333e886c13f1)
+        ;
+
+        
+    
+    
+            var marker_920d1a12dac11f5f2452c7c277c6001d = L.marker(
+                [27.1396297, -82.3929787],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_e41a0fdb2e78a8a66fbdf6f6a80bae77 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n                "});
+            marker_920d1a12dac11f5f2452c7c277c6001d.setIcon(div_icon_e41a0fdb2e78a8a66fbdf6f6a80bae77);
+        
+    
+        var popup_4d39c89bbe44468c453c8d7548e74aa4 = L.popup({"maxWidth": 300});
+
+        
+            var html_3be60cd773131ff10b11f25bb374fa3c = $(`<div id="html_3be60cd773131ff10b11f25bb374fa3c" style="width: 100.0%; height: 100.0%;"><b>6. Turk, George Francis</b><br>136 Pescador Pl Nokomis, Florida 34275-1017</div>`)[0];
+            popup_4d39c89bbe44468c453c8d7548e74aa4.setContent(html_3be60cd773131ff10b11f25bb374fa3c);
+        
+
+        marker_920d1a12dac11f5f2452c7c277c6001d.bindPopup(popup_4d39c89bbe44468c453c8d7548e74aa4)
+        ;
+
+        
+    
+    
+            var marker_9ad38c8dec6502da23565ff7f29d1742 = L.marker(
+                [27.1393172, -82.393411],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_ac3a0913b454e4d69c1913e7e88b5841 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    7\n                \u003c/div\u003e\n                "});
+            marker_9ad38c8dec6502da23565ff7f29d1742.setIcon(div_icon_ac3a0913b454e4d69c1913e7e88b5841);
+        
+    
+        var popup_417c85cff7d7c1f0ce3564ac6a3ec511 = L.popup({"maxWidth": 300});
+
+        
+            var html_e2095b0b8db3275dc037203a78b50eda = $(`<div id="html_e2095b0b8db3275dc037203a78b50eda" style="width: 100.0%; height: 100.0%;"><b>7. Echols, Daniel & Karen Marguerite</b><br>143 Pescador Pl Nokomis, Florida 34275-1017</div>`)[0];
+            popup_417c85cff7d7c1f0ce3564ac6a3ec511.setContent(html_e2095b0b8db3275dc037203a78b50eda);
+        
+
+        marker_9ad38c8dec6502da23565ff7f29d1742.bindPopup(popup_417c85cff7d7c1f0ce3564ac6a3ec511)
+        ;
+
+        
+    
+    
+            var marker_d4ce146b30650bf9c593e69351fa073b = L.marker(
+                [27.136275, -82.388353],
+                {}
+            ).addTo(map_d070c01d67238fad8fe68377435dfe06);
+        
+    
+            var div_icon_ac7adb7e79f2f6857485651a49c47127 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #73ac2f; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    8\n                \u003c/div\u003e\n                "});
+            marker_d4ce146b30650bf9c593e69351fa073b.setIcon(div_icon_ac7adb7e79f2f6857485651a49c47127);
+        
+    
+        var popup_204e4ba2632d27d3a19be9bbc4a2b9c3 = L.popup({"maxWidth": 300});
+
+        
+            var html_fe38fe297a616cb26495887ae7a325ad = $(`<div id="html_fe38fe297a616cb26495887ae7a325ad" style="width: 100.0%; height: 100.0%;"><b>8. Ellison, Ammon & Megan Chelsea</b><br>139 Forsano Blvd Nokomis, Florida 34275-1102</div>`)[0];
+            popup_204e4ba2632d27d3a19be9bbc4a2b9c3.setContent(html_fe38fe297a616cb26495887ae7a325ad);
+        
+
+        marker_d4ce146b30650bf9c593e69351fa073b.bindPopup(popup_204e4ba2632d27d3a19be9bbc4a2b9c3)
+        ;
+
+        
+    
+</script>
+</html>

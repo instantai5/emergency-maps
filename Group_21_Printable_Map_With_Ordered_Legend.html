@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9a1c587249df84af8675aad2c6353aea {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 300px; height: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; padding: 10px;'><b>Group 21 Members (North to South)</b><br><hr style='margin:4px 0;'><b>1</b>. Merrill, William<br><b>2</b>. Smith, Marion<br><b>3</b>. Wozniak, Teresa<br><b>4</b>. Wilder, Harry Hall & Sharon<br><b>5</b>. Werden, Daniel & Stacy<br><b>6</b>. Quillen, James & Deedee<br><b>7</b>. Schwartz, Lynn & Gale<br><b>8</b>. Hansen, Daniel Anthony<br><b>9</b>. Reilly, Dennis William<br></div>
+    
+            <div class="folium-map" id="map_9a1c587249df84af8675aad2c6353aea" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9a1c587249df84af8675aad2c6353aea = L.map(
+                "map_9a1c587249df84af8675aad2c6353aea",
+                {
+                    center: [27.002528366666663, -82.38739366666665],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ab8b189b8d7fa4083a22b9f20163ca30 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var polygon_a7b8c09004ee6f6e644c4e7ff71f02e8 = L.polygon(
+                [[26.99683, -82.3771045], [26.9978154, -82.3834426], [26.9999475, -82.3968349], [27.0171115, -82.4013355], [27.0042515, -82.379457], [26.99683, -82.3771045]],
+                {"bubblingMouseEvents": true, "color": "#ffb700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffb700", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+        var popup_19868b2697f22c23569bb1c8c9700af1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35b69bd900f027a7b6e5fb7ed72a4477 = $(`<div id="html_35b69bd900f027a7b6e5fb7ed72a4477" style="width: 100.0%; height: 100.0%;">Group 21 Boundary</div>`)[0];
+            popup_19868b2697f22c23569bb1c8c9700af1.setContent(html_35b69bd900f027a7b6e5fb7ed72a4477);
+        
+
+        polygon_a7b8c09004ee6f6e644c4e7ff71f02e8.bindPopup(popup_19868b2697f22c23569bb1c8c9700af1)
+        ;
+
+        
+    
+    
+            var marker_42460ca9d63983d707afea5810195fd6 = L.marker(
+                [27.0171115, -82.4013355],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_0a5d6206f9fca3362874f971c51289f9 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n                "});
+            marker_42460ca9d63983d707afea5810195fd6.setIcon(div_icon_0a5d6206f9fca3362874f971c51289f9);
+        
+    
+        var popup_1abfe782b1707a9d737dbbe797e000f5 = L.popup({"maxWidth": 300});
+
+        
+            var html_e9ec82f61de32c24b95a47679f70949e = $(`<div id="html_e9ec82f61de32c24b95a47679f70949e" style="width: 100.0%; height: 100.0%;"><b>1. Merrill, William</b><br>1712 Fossil Dr Englewood, Florida 34223-6227</div>`)[0];
+            popup_1abfe782b1707a9d737dbbe797e000f5.setContent(html_e9ec82f61de32c24b95a47679f70949e);
+        
+
+        marker_42460ca9d63983d707afea5810195fd6.bindPopup(popup_1abfe782b1707a9d737dbbe797e000f5)
+        ;
+
+        
+    
+    
+            var marker_4a9b61e9fb03f3d59a5fe81acebf05e7 = L.marker(
+                [27.0042515, -82.379457],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_bcebfb7166f19423060098a72f437367 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n                "});
+            marker_4a9b61e9fb03f3d59a5fe81acebf05e7.setIcon(div_icon_bcebfb7166f19423060098a72f437367);
+        
+    
+        var popup_fd2d37eedb7bc746e6ca723d675b5711 = L.popup({"maxWidth": 300});
+
+        
+            var html_2bd3e01fc68c58dbe98b753e0f0c6179 = $(`<div id="html_2bd3e01fc68c58dbe98b753e0f0c6179" style="width: 100.0%; height: 100.0%;"><b>2. Smith, Marion</b><br>1987 Forked Creek Dr Englewood, Florida 34223-1705</div>`)[0];
+            popup_fd2d37eedb7bc746e6ca723d675b5711.setContent(html_2bd3e01fc68c58dbe98b753e0f0c6179);
+        
+
+        marker_4a9b61e9fb03f3d59a5fe81acebf05e7.bindPopup(popup_fd2d37eedb7bc746e6ca723d675b5711)
+        ;
+
+        
+    
+    
+            var marker_ca014b06946c50a6b4b0991245119874 = L.marker(
+                [27.0033906, -82.3797405],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_9bbd26776c67bae092cd25ce09698d02 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n                "});
+            marker_ca014b06946c50a6b4b0991245119874.setIcon(div_icon_9bbd26776c67bae092cd25ce09698d02);
+        
+    
+        var popup_a753228225b83f31cc37b17c0b1ce203 = L.popup({"maxWidth": 300});
+
+        
+            var html_5918793036cb55efdc130617c7afb49e = $(`<div id="html_5918793036cb55efdc130617c7afb49e" style="width: 100.0%; height: 100.0%;"><b>3. Wozniak, Teresa</b><br>1316 Buereau Rd Englewood, Florida 34223-1702</div>`)[0];
+            popup_a753228225b83f31cc37b17c0b1ce203.setContent(html_5918793036cb55efdc130617c7afb49e);
+        
+
+        marker_ca014b06946c50a6b4b0991245119874.bindPopup(popup_a753228225b83f31cc37b17c0b1ce203)
+        ;
+
+        
+    
+    
+            var marker_0f5164fb2bba0c392cbf9681fced9719 = L.marker(
+                [27.0025997, -82.3895088],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_d304b84965301be71a855bb94507ac22 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n                "});
+            marker_0f5164fb2bba0c392cbf9681fced9719.setIcon(div_icon_d304b84965301be71a855bb94507ac22);
+        
+    
+        var popup_b3ced25c3c8548177d601a6012daabb1 = L.popup({"maxWidth": 300});
+
+        
+            var html_eb95c8ac01c7492a31b2cbb35662806f = $(`<div id="html_eb95c8ac01c7492a31b2cbb35662806f" style="width: 100.0%; height: 100.0%;"><b>4. Wilder, Harry Hall & Sharon</b><br>1958 Neptune Dr Englewood, Florida 34223-1535</div>`)[0];
+            popup_b3ced25c3c8548177d601a6012daabb1.setContent(html_eb95c8ac01c7492a31b2cbb35662806f);
+        
+
+        marker_0f5164fb2bba0c392cbf9681fced9719.bindPopup(popup_b3ced25c3c8548177d601a6012daabb1)
+        ;
+
+        
+    
+    
+            var marker_f162eda687452c8ed835259c7ea922b1 = L.marker(
+                [27.0020765, -82.3972948999999],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_f85b383b2234ed35de4734032c276aab = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n                "});
+            marker_f162eda687452c8ed835259c7ea922b1.setIcon(div_icon_f85b383b2234ed35de4734032c276aab);
+        
+    
+        var popup_d2595e71a1b37270d14bb416afd3d98e = L.popup({"maxWidth": 300});
+
+        
+            var html_5a44f7f9f49ee189e714e12082cc0126 = $(`<div id="html_5a44f7f9f49ee189e714e12082cc0126" style="width: 100.0%; height: 100.0%;"><b>5. Werden, Daniel & Stacy</b><br>1810 Bahia Terrado Englewood, Florida 34223-1502</div>`)[0];
+            popup_d2595e71a1b37270d14bb416afd3d98e.setContent(html_5a44f7f9f49ee189e714e12082cc0126);
+        
+
+        marker_f162eda687452c8ed835259c7ea922b1.bindPopup(popup_d2595e71a1b37270d14bb416afd3d98e)
+        ;
+
+        
+    
+    
+            var marker_c66efd4f53cfcef003c6c5173f74e52b = L.marker(
+                [26.9999475, -82.3968349],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_dcea4b95209b8ee93752ac1f67656166 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n                "});
+            marker_c66efd4f53cfcef003c6c5173f74e52b.setIcon(div_icon_dcea4b95209b8ee93752ac1f67656166);
+        
+    
+        var popup_2cb2b31564feddec107d2b2633b856cf = L.popup({"maxWidth": 300});
+
+        
+            var html_baf99550437cbfbdb03855917a52ef84 = $(`<div id="html_baf99550437cbfbdb03855917a52ef84" style="width: 100.0%; height: 100.0%;"><b>6. Quillen, James & Deedee</b><br>1775 Bayshore Drive Englewood, Florida 34223-1556</div>`)[0];
+            popup_2cb2b31564feddec107d2b2633b856cf.setContent(html_baf99550437cbfbdb03855917a52ef84);
+        
+
+        marker_c66efd4f53cfcef003c6c5173f74e52b.bindPopup(popup_2cb2b31564feddec107d2b2633b856cf)
+        ;
+
+        
+    
+    
+            var marker_e1dd1aa4441f28f8435f41e66b889d8c = L.marker(
+                [26.9987326, -82.3818242999999],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_2654e4edcc17f50d1cd356220598eda5 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    7\n                \u003c/div\u003e\n                "});
+            marker_e1dd1aa4441f28f8435f41e66b889d8c.setIcon(div_icon_2654e4edcc17f50d1cd356220598eda5);
+        
+    
+        var popup_ffbee325c413dd57e3adebe9a23ea896 = L.popup({"maxWidth": 300});
+
+        
+            var html_4c469494ddbfe4c0e627ebc7831e5ca2 = $(`<div id="html_4c469494ddbfe4c0e627ebc7831e5ca2" style="width: 100.0%; height: 100.0%;"><b>7. Schwartz, Lynn & Gale</b><br>12 Windsor Dr Englewood, Florida 34223-4638</div>`)[0];
+            popup_ffbee325c413dd57e3adebe9a23ea896.setContent(html_4c469494ddbfe4c0e627ebc7831e5ca2);
+        
+
+        marker_e1dd1aa4441f28f8435f41e66b889d8c.bindPopup(popup_ffbee325c413dd57e3adebe9a23ea896)
+        ;
+
+        
+    
+    
+            var marker_31efe8b0457cbc50e6b7251db51f56a4 = L.marker(
+                [26.9978154, -82.3834426],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_36bc70e3a0df382fb66b57b59b88bb00 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    8\n                \u003c/div\u003e\n                "});
+            marker_31efe8b0457cbc50e6b7251db51f56a4.setIcon(div_icon_36bc70e3a0df382fb66b57b59b88bb00);
+        
+    
+        var popup_db3cbb2264bad45516617017e7055a03 = L.popup({"maxWidth": 300});
+
+        
+            var html_938260cec0e8f8f0b160a8b6390b84d0 = $(`<div id="html_938260cec0e8f8f0b160a8b6390b84d0" style="width: 100.0%; height: 100.0%;"><b>8. Hansen, Daniel Anthony</b><br>11 Old Trail Rd Englewood, Florida 34223-4651</div>`)[0];
+            popup_db3cbb2264bad45516617017e7055a03.setContent(html_938260cec0e8f8f0b160a8b6390b84d0);
+        
+
+        marker_31efe8b0457cbc50e6b7251db51f56a4.bindPopup(popup_db3cbb2264bad45516617017e7055a03)
+        ;
+
+        
+    
+    
+            var marker_5511231701cfd38e9e19e40bebbf0c3a = L.marker(
+                [26.99683, -82.3771045],
+                {}
+            ).addTo(map_9a1c587249df84af8675aad2c6353aea);
+        
+    
+            var div_icon_bcab52543d6e7a7410a8f4a34fd72b0c = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #ffb700; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    9\n                \u003c/div\u003e\n                "});
+            marker_5511231701cfd38e9e19e40bebbf0c3a.setIcon(div_icon_bcab52543d6e7a7410a8f4a34fd72b0c);
+        
+    
+        var popup_2a182a2a2f34d0863c2b497c66b1434d = L.popup({"maxWidth": 300});
+
+        
+            var html_4b3ed210c976382e5c95088353d30167 = $(`<div id="html_4b3ed210c976382e5c95088353d30167" style="width: 100.0%; height: 100.0%;"><b>9. Reilly, Dennis William</b><br>1800 Englewood Rd Lot 110 Englewood Fl, Florida 34223 1870</div>`)[0];
+            popup_2a182a2a2f34d0863c2b497c66b1434d.setContent(html_4b3ed210c976382e5c95088353d30167);
+        
+
+        marker_5511231701cfd38e9e19e40bebbf0c3a.bindPopup(popup_2a182a2a2f34d0863c2b497c66b1434d)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_15066ec2db6f3ab853cb219156b77a08 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 300px; height: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; padding: 10px;'><b>Group 10 Members (North to South)</b><br><hr style='margin:4px 0;'><b>1</b>. Clover, Robert W. & Betty<br><b>2</b>. Johnson, Joe<br><b>3</b>. McDonough, Mark John<br><b>4</b>. Sands, Mercy Marie<br><b>5</b>. Brower, Richard<br><b>6</b>. Bullen, Larry & Karen<br></div>
+    
+            <div class="folium-map" id="map_15066ec2db6f3ab853cb219156b77a08" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_15066ec2db6f3ab853cb219156b77a08 = L.map(
+                "map_15066ec2db6f3ab853cb219156b77a08",
+                {
+                    center: [27.094370333333334, -82.45183386666663],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eab5f32db1daf90ee83be29fd3d13c9a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var polygon_ffc23caf71eb787e44e3082d30c8b2d9 = L.polygon(
+                [[27.0850634, -82.4469881999999], [27.0889106, -82.4557774], [27.1040037, -82.4615527999999], [27.0993738, -82.4441533], [27.0868914, -82.4419927], [27.0850634, -82.4469881999999]],
+                {"bubblingMouseEvents": true, "color": "#303030", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#303030", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+        var popup_88f0b9e69921534b48b9334e09253f85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d2d5a6c93b2f51af2e4060b742c5a66 = $(`<div id="html_8d2d5a6c93b2f51af2e4060b742c5a66" style="width: 100.0%; height: 100.0%;">Group 10 Boundary</div>`)[0];
+            popup_88f0b9e69921534b48b9334e09253f85.setContent(html_8d2d5a6c93b2f51af2e4060b742c5a66);
+        
+
+        polygon_ffc23caf71eb787e44e3082d30c8b2d9.bindPopup(popup_88f0b9e69921534b48b9334e09253f85)
+        ;
+
+        
+    
+    
+            var marker_ca4df49b421edcdc789c4d111e896b83 = L.marker(
+                [27.1040037, -82.4615527999999],
+                {}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var div_icon_56c951cdc904490982559c1a70894e60 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #303030; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n                "});
+            marker_ca4df49b421edcdc789c4d111e896b83.setIcon(div_icon_56c951cdc904490982559c1a70894e60);
+        
+    
+        var popup_994d5133bc7b97f2bbffc8383061c404 = L.popup({"maxWidth": 300});
+
+        
+            var html_cf25a76e02e42c8d7fde2640fe64974d = $(`<div id="html_cf25a76e02e42c8d7fde2640fe64974d" style="width: 100.0%; height: 100.0%;"><b>1. Clover, Robert W. & Betty</b><br>811 The Esplanade North Apt 804 Venice, Florida 34285</div>`)[0];
+            popup_994d5133bc7b97f2bbffc8383061c404.setContent(html_cf25a76e02e42c8d7fde2640fe64974d);
+        
+
+        marker_ca4df49b421edcdc789c4d111e896b83.bindPopup(popup_994d5133bc7b97f2bbffc8383061c404)
+        ;
+
+        
+    
+    
+            var marker_8b9408562b40ad14ecb092319895c115 = L.marker(
+                [27.1019791, -82.4605388],
+                {}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var div_icon_e5c42018385c4d628c683d1e8b074dc7 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #303030; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n                "});
+            marker_8b9408562b40ad14ecb092319895c115.setIcon(div_icon_e5c42018385c4d628c683d1e8b074dc7);
+        
+    
+        var popup_f2987f2ebd20b2c0fda9f3e27c0a19f7 = L.popup({"maxWidth": 300});
+
+        
+            var html_66608cbc0ee0c3b735497fe5bf5de39b = $(`<div id="html_66608cbc0ee0c3b735497fe5bf5de39b" style="width: 100.0%; height: 100.0%;"><b>2. Johnson, Joe</b><br>333 The Esplanade N Venice, Florida 34285-1548</div>`)[0];
+            popup_f2987f2ebd20b2c0fda9f3e27c0a19f7.setContent(html_66608cbc0ee0c3b735497fe5bf5de39b);
+        
+
+        marker_8b9408562b40ad14ecb092319895c115.bindPopup(popup_f2987f2ebd20b2c0fda9f3e27c0a19f7)
+        ;
+
+        
+    
+    
+            var marker_78c2b4aed95372b3edfeb30f1b16689e = L.marker(
+                [27.0993738, -82.4441533],
+                {}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var div_icon_9cddb24a60c7db6d3953810068049440 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #303030; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n                "});
+            marker_78c2b4aed95372b3edfeb30f1b16689e.setIcon(div_icon_9cddb24a60c7db6d3953810068049440);
+        
+    
+        var popup_3480443d3bb5cdcb22590e77e3b05ca0 = L.popup({"maxWidth": 300});
+
+        
+            var html_858993c9776c2271b6ea8a24f2f9d9e6 = $(`<div id="html_858993c9776c2271b6ea8a24f2f9d9e6" style="width: 100.0%; height: 100.0%;"><b>3. McDonough, Mark John</b><br>119 Tamiami Trl S Nokomis, Florida 34275-2146</div>`)[0];
+            popup_3480443d3bb5cdcb22590e77e3b05ca0.setContent(html_858993c9776c2271b6ea8a24f2f9d9e6);
+        
+
+        marker_78c2b4aed95372b3edfeb30f1b16689e.bindPopup(popup_3480443d3bb5cdcb22590e77e3b05ca0)
+        ;
+
+        
+    
+    
+            var marker_f3ac24996a1eb9cb9cdccc66942fd91b = L.marker(
+                [27.0889106, -82.4557774],
+                {}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var div_icon_b33e165bc2386dbfa640a75fefe1a34a = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #303030; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n                "});
+            marker_f3ac24996a1eb9cb9cdccc66942fd91b.setIcon(div_icon_b33e165bc2386dbfa640a75fefe1a34a);
+        
+    
+        var popup_4e5a70c5cbbc7efd59ebb0e80e34e28d = L.popup({"maxWidth": 300});
+
+        
+            var html_5dfaa328c1f1227b4c666d51cb5df60f = $(`<div id="html_5dfaa328c1f1227b4c666d51cb5df60f" style="width: 100.0%; height: 100.0%;"><b>4. Sands, Mercy Marie</b><br>908 Villas Dr Unit 68 Venice, Florida 34285-3053</div>`)[0];
+            popup_4e5a70c5cbbc7efd59ebb0e80e34e28d.setContent(html_5dfaa328c1f1227b4c666d51cb5df60f);
+        
+
+        marker_f3ac24996a1eb9cb9cdccc66942fd91b.bindPopup(popup_4e5a70c5cbbc7efd59ebb0e80e34e28d)
+        ;
+
+        
+    
+    
+            var marker_6b546ee367f3f6085683d9caa9938563 = L.marker(
+                [27.0868914, -82.4419927],
+                {}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var div_icon_df758afbab40f1d951c78879839e7667 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #303030; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n                "});
+            marker_6b546ee367f3f6085683d9caa9938563.setIcon(div_icon_df758afbab40f1d951c78879839e7667);
+        
+    
+        var popup_7421c0f2a63db038eb9621cbfa514c14 = L.popup({"maxWidth": 300});
+
+        
+            var html_0adc44b267a91af81f7d398a5f758cfd = $(`<div id="html_0adc44b267a91af81f7d398a5f758cfd" style="width: 100.0%; height: 100.0%;"><b>5. Brower, Richard</b><br>708 Tamiami Trl S Apt 119 Venice, Florida 34285-3615</div>`)[0];
+            popup_7421c0f2a63db038eb9621cbfa514c14.setContent(html_0adc44b267a91af81f7d398a5f758cfd);
+        
+
+        marker_6b546ee367f3f6085683d9caa9938563.bindPopup(popup_7421c0f2a63db038eb9621cbfa514c14)
+        ;
+
+        
+    
+    
+            var marker_94488a9e847a26d78065ce98d700c798 = L.marker(
+                [27.0850634, -82.4469881999999],
+                {}
+            ).addTo(map_15066ec2db6f3ab853cb219156b77a08);
+        
+    
+            var div_icon_4f97b95d3eaa5ba16d3e3cc214dbe8b7 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #303030; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n                "});
+            marker_94488a9e847a26d78065ce98d700c798.setIcon(div_icon_4f97b95d3eaa5ba16d3e3cc214dbe8b7);
+        
+    
+        var popup_80994aa928b0b690dae10df3e429460b = L.popup({"maxWidth": 300});
+
+        
+            var html_5d4595a0ee241b1a7e5c27d09583837c = $(`<div id="html_5d4595a0ee241b1a7e5c27d09583837c" style="width: 100.0%; height: 100.0%;"><b>6. Bullen, Larry & Karen</b><br>840 Riviera St Venice, Florida 34285-3430</div>`)[0];
+            popup_80994aa928b0b690dae10df3e429460b.setContent(html_5d4595a0ee241b1a7e5c27d09583837c);
+        
+
+        marker_94488a9e847a26d78065ce98d700c798.bindPopup(popup_80994aa928b0b690dae10df3e429460b)
+        ;
+
+        
+    
+</script>
+</html>

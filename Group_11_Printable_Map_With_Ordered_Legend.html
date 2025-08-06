@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_19d8affe67a0634d2c9c10fcb13f6319 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 300px; height: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; padding: 10px;'><b>Group 11 Members (North to South)</b><br><hr style='margin:4px 0;'><b>1</b>. Tecklenburg, Linda<br><b>2</b>. Cooper, Dan & Jeanne Marie<br><b>3</b>. Richey, Robert Lee & Debra<br><b>4</b>. Timm, Paul & Sheron<br><b>5</b>. McAllister, Lloyd & Eileen<br><b>6</b>. Bradley, Savannah Marian<br></div>
+    
+            <div class="folium-map" id="map_19d8affe67a0634d2c9c10fcb13f6319" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_19d8affe67a0634d2c9c10fcb13f6319 = L.map(
+                "map_19d8affe67a0634d2c9c10fcb13f6319",
+                {
+                    center: [27.085366999999994, -82.34713368333328],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3193345f4feadaa3f0ae06cc294ffb9a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var polygon_efe99b01ab31ffd83f6144a00bb4a133 = L.polygon(
+                [[27.0798897, -82.3511118], [27.0855265, -82.350264], [27.1001234, -82.3463812999999], [27.0827485, -82.3354801999999], [27.0798999, -82.3493838], [27.0798897, -82.3511118]],
+                {"bubblingMouseEvents": true, "color": "#fd93e8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fd93e8", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+        var popup_3038d9866aa01510d348a219990b0032 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4c25f6203a90ea9ec4c2f9b36188acd = $(`<div id="html_f4c25f6203a90ea9ec4c2f9b36188acd" style="width: 100.0%; height: 100.0%;">Group 11 Boundary</div>`)[0];
+            popup_3038d9866aa01510d348a219990b0032.setContent(html_f4c25f6203a90ea9ec4c2f9b36188acd);
+        
+
+        polygon_efe99b01ab31ffd83f6144a00bb4a133.bindPopup(popup_3038d9866aa01510d348a219990b0032)
+        ;
+
+        
+    
+    
+            var marker_49137270a7767551d9c9ee1068261955 = L.marker(
+                [27.1001234, -82.3463812999999],
+                {}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var div_icon_8546344251175a9eb12280209b906cc6 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #fd93e8; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n                "});
+            marker_49137270a7767551d9c9ee1068261955.setIcon(div_icon_8546344251175a9eb12280209b906cc6);
+        
+    
+        var popup_eaf52db697d68540115d78bc995f584f = L.popup({"maxWidth": 300});
+
+        
+            var html_b98dd1e628d0d7f97a00396b4749d78e = $(`<div id="html_b98dd1e628d0d7f97a00396b4749d78e" style="width: 100.0%; height: 100.0%;"><b>1. Tecklenburg, Linda</b><br>11586 Blackfin St Venice, Florida 34292-1752</div>`)[0];
+            popup_eaf52db697d68540115d78bc995f584f.setContent(html_b98dd1e628d0d7f97a00396b4749d78e);
+        
+
+        marker_49137270a7767551d9c9ee1068261955.bindPopup(popup_eaf52db697d68540115d78bc995f584f)
+        ;
+
+        
+    
+    
+            var marker_dcd3885955a42041bae89338006cd2f6 = L.marker(
+                [27.0855265, -82.350264],
+                {}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var div_icon_c568f7a3e18a4105a9a6724d071597e8 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #fd93e8; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n                "});
+            marker_dcd3885955a42041bae89338006cd2f6.setIcon(div_icon_c568f7a3e18a4105a9a6724d071597e8);
+        
+    
+        var popup_e97790c3e1d6166995405259d44319c8 = L.popup({"maxWidth": 300});
+
+        
+            var html_4e2d5286931202348855edf540907676 = $(`<div id="html_4e2d5286931202348855edf540907676" style="width: 100.0%; height: 100.0%;"><b>2. Cooper, Dan & Jeanne Marie</b><br>11501 Dancing River Dr Venice, Florida 34292-4162</div>`)[0];
+            popup_e97790c3e1d6166995405259d44319c8.setContent(html_4e2d5286931202348855edf540907676);
+        
+
+        marker_dcd3885955a42041bae89338006cd2f6.bindPopup(popup_e97790c3e1d6166995405259d44319c8)
+        ;
+
+        
+    
+    
+            var marker_5fe6c6c9301249f224daf1f4fe0e8b87 = L.marker(
+                [27.084014, -82.3501809999999],
+                {}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var div_icon_e2febc8de8817fe49e37022ef473c2f5 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #fd93e8; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n                "});
+            marker_5fe6c6c9301249f224daf1f4fe0e8b87.setIcon(div_icon_e2febc8de8817fe49e37022ef473c2f5);
+        
+    
+        var popup_6836f9f3ca289485b9773a16735aec4b = L.popup({"maxWidth": 300});
+
+        
+            var html_d0ba19b56a0e5811c09f0a70e5dd7a3e = $(`<div id="html_d0ba19b56a0e5811c09f0a70e5dd7a3e" style="width: 100.0%; height: 100.0%;"><b>3. Richey, Robert Lee & Debra</b><br>11489 Tinder Ct Venice, Florida 34292-4129</div>`)[0];
+            popup_6836f9f3ca289485b9773a16735aec4b.setContent(html_d0ba19b56a0e5811c09f0a70e5dd7a3e);
+        
+
+        marker_5fe6c6c9301249f224daf1f4fe0e8b87.bindPopup(popup_6836f9f3ca289485b9773a16735aec4b)
+        ;
+
+        
+    
+    
+            var marker_fd2a1f4140bdf9b8d1af4ed1e0f935c9 = L.marker(
+                [27.0827485, -82.3354801999999],
+                {}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var div_icon_1416cc09ca1db5058d06af456cf60d57 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #fd93e8; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n                "});
+            marker_fd2a1f4140bdf9b8d1af4ed1e0f935c9.setIcon(div_icon_1416cc09ca1db5058d06af456cf60d57);
+        
+    
+        var popup_a6d2c5ee309fcb2d10a1f919e9da57b2 = L.popup({"maxWidth": 300});
+
+        
+            var html_7c487587f1e92fffe39d9bd8f6458df6 = $(`<div id="html_7c487587f1e92fffe39d9bd8f6458df6" style="width: 100.0%; height: 100.0%;"><b>4. Timm, Paul & Sheron</b><br>12360 Destiny Dr Venice, Florida 34292-3816</div>`)[0];
+            popup_a6d2c5ee309fcb2d10a1f919e9da57b2.setContent(html_7c487587f1e92fffe39d9bd8f6458df6);
+        
+
+        marker_fd2a1f4140bdf9b8d1af4ed1e0f935c9.bindPopup(popup_a6d2c5ee309fcb2d10a1f919e9da57b2)
+        ;
+
+        
+    
+    
+            var marker_e8c6323e55f53e3e223bb193da36c6d1 = L.marker(
+                [27.0798999, -82.3493838],
+                {}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var div_icon_7fe77e9796340c552c6b93afba754072 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #fd93e8; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n                "});
+            marker_e8c6323e55f53e3e223bb193da36c6d1.setIcon(div_icon_7fe77e9796340c552c6b93afba754072);
+        
+    
+        var popup_0ad11ae2e43133a0eb39f8470d3ae4a9 = L.popup({"maxWidth": 300});
+
+        
+            var html_38b0f604c8a46cbbc6a6e8b39675cbda = $(`<div id="html_38b0f604c8a46cbbc6a6e8b39675cbda" style="width: 100.0%; height: 100.0%;"><b>5. McAllister, Lloyd & Eileen</b><br>2379 Caraway Dr Venice, Florida 34292-4174</div>`)[0];
+            popup_0ad11ae2e43133a0eb39f8470d3ae4a9.setContent(html_38b0f604c8a46cbbc6a6e8b39675cbda);
+        
+
+        marker_e8c6323e55f53e3e223bb193da36c6d1.bindPopup(popup_0ad11ae2e43133a0eb39f8470d3ae4a9)
+        ;
+
+        
+    
+    
+            var marker_fa06cb41182d50c084732eac4e156d43 = L.marker(
+                [27.0798897, -82.3511118],
+                {}
+            ).addTo(map_19d8affe67a0634d2c9c10fcb13f6319);
+        
+    
+            var div_icon_12c2ef720ea4c99c67dac0f6988ee694 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #fd93e8; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n                "});
+            marker_fa06cb41182d50c084732eac4e156d43.setIcon(div_icon_12c2ef720ea4c99c67dac0f6988ee694);
+        
+    
+        var popup_77cb0e1a18a38511b0114c07471bb4bd = L.popup({"maxWidth": 300});
+
+        
+            var html_552a6d54e87c074da410c13d6f4cdb70 = $(`<div id="html_552a6d54e87c074da410c13d6f4cdb70" style="width: 100.0%; height: 100.0%;"><b>6. Bradley, Savannah Marian</b><br>2424 Caraway Dr Venice, Florida 34292-</div>`)[0];
+            popup_77cb0e1a18a38511b0114c07471bb4bd.setContent(html_552a6d54e87c074da410c13d6f4cdb70);
+        
+
+        marker_fa06cb41182d50c084732eac4e156d43.bindPopup(popup_77cb0e1a18a38511b0114c07471bb4bd)
+        ;
+
+        
+    
+</script>
+</html>
