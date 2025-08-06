@@ -1,0 +1,1 @@
+This repository hosts emergency preparedness maps built for the Venice Ward of The Church of Jesus Christ of Latter-day Saints. These maps are intended to provide communication and emergency response support in both preparing for, during, and post-storm responses.
