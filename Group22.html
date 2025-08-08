@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3f56a3b4d26025132b81d9cde0b1f2b5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <link href="tooplate-neural-style.css" rel="stylesheet">
+        
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- INSTANT AI 5 Logo -->
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                    <circle cx="25" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="75" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                    
+                    <!-- Connections -->
+                    <line x1="50" y1="28" x2="25" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="28" x2="75" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="25" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="75" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    
+                    <!-- Center node -->
+                    <circle cx="50" cy="50" r="5" fill="#00ffff"/>
+                    <line x1="50" y1="28" x2="50" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="55" x2="50" y2="72" stroke="#ffff00" stroke-width="1" opacity="0.6"/>
+                    <line x1="33" y1="50" x2="45" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="55" y1="50" x2="67" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">INSTANT AI 5</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+<!--                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 300px; height: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; color:black; padding: 10px;'><b>Group 22 Members (North to South)</b><br><hr style='margin:4px 0;'><b>1</b>. Wedig, Thomas & Teresa Lynn<br><b>2</b>. Neff, Benjamin Oren & Julia<br><b>3</b>. Hawkins, Catherine Eileen<br><b>4</b>. Scott, Daniel Lyons & Mickayla Josie Ann<br><b>5</b>. McArthur, Mike & Penny<br><b>6</b>. Fitch, Tanya Rene<br></div>
+    
+            <div class="folium-map" id="map_3f56a3b4d26025132b81d9cde0b1f2b5" ></div>
+    <script src="tooplate-neural-scripts.js"></script>
+        
+</body>
+<script>
+    
+    
+            var map_3f56a3b4d26025132b81d9cde0b1f2b5 = L.map(
+                "map_3f56a3b4d26025132b81d9cde0b1f2b5",
+                {
+                    center: [26.956024350000003, -82.34544296666661],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dd9e8868fc73a8e3ac7c2fe280a90fd9 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var polygon_0d4dfb54199bb1716ee2a89eebcdd711 = L.polygon(
+                [[26.9236878, -82.2692244], [26.9279584, -82.3628315999999], [26.9848472, -82.3667244], [26.9236878, -82.2692244]],
+                {"bubblingMouseEvents": true, "color": "#008080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#008080", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+        var popup_83cdfddd05f26361f09b82d58eb559ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5493401b927b32d4eeee94b10f97af96 = $(`<div id="html_5493401b927b32d4eeee94b10f97af96" style="width: 100.0%; height: 100.0%;">Group 22 Boundary</div>`)[0];
+            popup_83cdfddd05f26361f09b82d58eb559ac.setContent(html_5493401b927b32d4eeee94b10f97af96);
+        
+
+        polygon_0d4dfb54199bb1716ee2a89eebcdd711.bindPopup(popup_83cdfddd05f26361f09b82d58eb559ac)
+        ;
+
+        
+    
+    
+            var marker_73f100873f2afea6d38cbcda17541e14 = L.marker(
+                [26.9848472, -82.3667244],
+                {}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var div_icon_64633a09f7509e4b8f041f71565989f0 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #008080; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n                "});
+            marker_73f100873f2afea6d38cbcda17541e14.setIcon(div_icon_64633a09f7509e4b8f041f71565989f0);
+        
+    
+        var popup_5790559c1e8ad3c60357f058e6b08ce5 = L.popup({"maxWidth": 300});
+
+        
+            var html_61812eaa273e5a7dd66b52a072f33d9e = $(`<div id="html_61812eaa273e5a7dd66b52a072f33d9e" style="width: 100.0%; height: 100.0%;"><b>1. Wedig, Thomas & Teresa Lynn</b><br>28 Tiffany St Englewood, Florida 34223-2246</div>`)[0];
+            popup_5790559c1e8ad3c60357f058e6b08ce5.setContent(html_61812eaa273e5a7dd66b52a072f33d9e);
+        
+
+        marker_73f100873f2afea6d38cbcda17541e14.bindPopup(popup_5790559c1e8ad3c60357f058e6b08ce5)
+        ;
+
+        
+    
+    
+            var marker_7345154dbaa72e07448538b233f3f526 = L.marker(
+                [26.9689339, -82.3605228999999],
+                {}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var div_icon_54264cae7933cbd5d14902c6b67af86b = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #008080; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n                "});
+            marker_7345154dbaa72e07448538b233f3f526.setIcon(div_icon_54264cae7933cbd5d14902c6b67af86b);
+        
+    
+        var popup_5933f3916f2c0159cb12f0eac4767bcb = L.popup({"maxWidth": 300});
+
+        
+            var html_d0f3a2f697746293f64357f83f988aa6 = $(`<div id="html_d0f3a2f697746293f64357f83f988aa6" style="width: 100.0%; height: 100.0%;"><b>2. Neff, Benjamin Oren & Julia</b><br>380 Gray Rd Englewood, Florida 34223-4024</div>`)[0];
+            popup_5933f3916f2c0159cb12f0eac4767bcb.setContent(html_d0f3a2f697746293f64357f83f988aa6);
+        
+
+        marker_7345154dbaa72e07448538b233f3f526.bindPopup(popup_5933f3916f2c0159cb12f0eac4767bcb)
+        ;
+
+        
+    
+    
+            var marker_050aaa19d8379579af1c3e2a5eabda7c = L.marker(
+                [26.9664976, -82.3579141],
+                {}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var div_icon_dc9180a5209e7289239f08ec3672c5b7 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #008080; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n                "});
+            marker_050aaa19d8379579af1c3e2a5eabda7c.setIcon(div_icon_dc9180a5209e7289239f08ec3672c5b7);
+        
+    
+        var popup_e0fd97b3026578c87f114d84a2376737 = L.popup({"maxWidth": 300});
+
+        
+            var html_e73b4e24bd2b4436cc625995ac5e7739 = $(`<div id="html_e73b4e24bd2b4436cc625995ac5e7739" style="width: 100.0%; height: 100.0%;"><b>3. Hawkins, Catherine Eileen</b><br>250 N McCall Rd Lt 4 Englewood, Florida 34223-4071</div>`)[0];
+            popup_e0fd97b3026578c87f114d84a2376737.setContent(html_e73b4e24bd2b4436cc625995ac5e7739);
+        
+
+        marker_050aaa19d8379579af1c3e2a5eabda7c.bindPopup(popup_e0fd97b3026578c87f114d84a2376737)
+        ;
+
+        
+    
+    
+            var marker_df31cbdb1f9c941ce0d11cfcf7353dfa = L.marker(
+                [26.9642212, -82.3554403999999],
+                {}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var div_icon_5c4cab2eb181ba6ffaa5f832a59bf7f2 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #008080; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n                "});
+            marker_df31cbdb1f9c941ce0d11cfcf7353dfa.setIcon(div_icon_5c4cab2eb181ba6ffaa5f832a59bf7f2);
+        
+    
+        var popup_d3281d49cacabb5e54f7bc8b047215c5 = L.popup({"maxWidth": 300});
+
+        
+            var html_fbe2777ea2c7d3c1e3d7d45977b449e2 = $(`<div id="html_fbe2777ea2c7d3c1e3d7d45977b449e2" style="width: 100.0%; height: 100.0%;"><b>4. Scott, Daniel Lyons & Mickayla Josie Ann</b><br>122 W Perry Ln Englewood, Florida 34223-2943</div>`)[0];
+            popup_d3281d49cacabb5e54f7bc8b047215c5.setContent(html_fbe2777ea2c7d3c1e3d7d45977b449e2);
+        
+
+        marker_df31cbdb1f9c941ce0d11cfcf7353dfa.bindPopup(popup_d3281d49cacabb5e54f7bc8b047215c5)
+        ;
+
+        
+    
+    
+            var marker_556091606ce59242d9ff3632531e165f = L.marker(
+                [26.9279584, -82.3628315999999],
+                {}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var div_icon_63d578d885226b1185c6047c3b70ed93 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #008080; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n                "});
+            marker_556091606ce59242d9ff3632531e165f.setIcon(div_icon_63d578d885226b1185c6047c3b70ed93);
+        
+    
+        var popup_45c5bf77dea46912bf6f7c8e5b250dab = L.popup({"maxWidth": 300});
+
+        
+            var html_0cdb21319ce697c7a38e5218987e0e2f = $(`<div id="html_0cdb21319ce697c7a38e5218987e0e2f" style="width: 100.0%; height: 100.0%;"><b>5. McArthur, Mike & Penny</b><br>23 Cielo St Englewood, Florida 34223-5720</div>`)[0];
+            popup_45c5bf77dea46912bf6f7c8e5b250dab.setContent(html_0cdb21319ce697c7a38e5218987e0e2f);
+        
+
+        marker_556091606ce59242d9ff3632531e165f.bindPopup(popup_45c5bf77dea46912bf6f7c8e5b250dab)
+        ;
+
+        
+    
+    
+            var marker_b22d09b2c91c532f6d91f4e1e5f1f029 = L.marker(
+                [26.9236878, -82.2692244],
+                {}
+            ).addTo(map_3f56a3b4d26025132b81d9cde0b1f2b5);
+        
+    
+            var div_icon_2071a7eae01bc2c93e2465b85b5e4157 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #008080; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n                "});
+            marker_b22d09b2c91c532f6d91f4e1e5f1f029.setIcon(div_icon_2071a7eae01bc2c93e2465b85b5e4157);
+        
+    
+        var popup_eb41cf4a0c198cc7bab808348fbd5b50 = L.popup({"maxWidth": 300});
+
+        
+            var html_af8714d26e15cb3414e178029c5544b8 = $(`<div id="html_af8714d26e15cb3414e178029c5544b8" style="width: 100.0%; height: 100.0%;"><b>6. Fitch, Tanya Rene</b><br>7426 Rosemont Dr Englewood, Florida 34224-8387</div>`)[0];
+            popup_eb41cf4a0c198cc7bab808348fbd5b50.setContent(html_af8714d26e15cb3414e178029c5544b8);
+        
+
+        marker_b22d09b2c91c532f6d91f4e1e5f1f029.bindPopup(popup_eb41cf4a0c198cc7bab808348fbd5b50)
+        ;
+
+        
+    
+</script>
+</html>

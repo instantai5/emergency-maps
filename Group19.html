@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b9a772f6b43293c154e2d16cd8304c6f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <link href="tooplate-neural-style.css" rel="stylesheet">
+        
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- INSTANT AI 5 Logo -->
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                    <circle cx="25" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="75" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                    
+                    <!-- Connections -->
+                    <line x1="50" y1="28" x2="25" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="28" x2="75" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="25" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="75" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    
+                    <!-- Center node -->
+                    <circle cx="50" cy="50" r="5" fill="#00ffff"/>
+                    <line x1="50" y1="28" x2="50" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="55" x2="50" y2="72" stroke="#ffff00" stroke-width="1" opacity="0.6"/>
+                    <line x1="33" y1="50" x2="45" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="55" y1="50" x2="67" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">INSTANT AI 5</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+<!--                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 300px; height: auto; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; color:black; padding: 10px;'><b>Group 19 Members (North to South)</b><br><hr style='margin:4px 0;'><b>1</b>. Hand, Charles Richard<br><b>2</b>. Demarree, Melinda Adella<br><b>3</b>. Exline, Anthony & Casarah<br><b>4</b>. Idahosa, Stephen Azeta<br><b>5</b>. Gustafson, Rita M.<br><b>6</b>. Epeards, Russell M & Lorraine<br><b>7</b>. Bouffard, David & Amy<br><b>8</b>. Taylor, Shannon Nicole<br><b>9</b>. Metzger, Joseph Anthony & Krista<br><b>10</b>. Sanchez, Robert Arthur<br><b>11</b>. Dooley, Melissa J.<br></div>
+    
+            <div class="folium-map" id="map_b9a772f6b43293c154e2d16cd8304c6f" ></div>
+    <script src="tooplate-neural-scripts.js"></script>
+        
+</body>
+<script>
+    
+    
+            var map_b9a772f6b43293c154e2d16cd8304c6f = L.map(
+                "map_b9a772f6b43293c154e2d16cd8304c6f",
+                {
+                    center: [27.045027645454546, -82.41213274545454],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d521ea63d6ca2b95d687f0e95f638152 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var polygon_f6d651189e8b1aaa78adabc5fb3cde40 = L.polygon(
+                [[27.0406944, -82.4068984], [27.0408825, -82.4151602], [27.0425884, -82.4201769], [27.0470556, -82.4207984], [27.0507878, -82.4065786], [27.0412276, -82.4033117], [27.0406944, -82.4068984]],
+                {"bubblingMouseEvents": true, "color": "#03639c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#03639c", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+        var popup_ac22eaf44291898b833d9dea205d5a70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95c8f6d3b563ae508e64141927e9f469 = $(`<div id="html_95c8f6d3b563ae508e64141927e9f469" style="width: 100.0%; height: 100.0%;">Group 19 Boundary</div>`)[0];
+            popup_ac22eaf44291898b833d9dea205d5a70.setContent(html_95c8f6d3b563ae508e64141927e9f469);
+        
+
+        polygon_f6d651189e8b1aaa78adabc5fb3cde40.bindPopup(popup_ac22eaf44291898b833d9dea205d5a70)
+        ;
+
+        
+    
+    
+            var marker_1d24e244504c39aae97539a7f649d6d4 = L.marker(
+                [27.0507878, -82.4065786],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_bd27f082606f2ad42d7f081b42127f7b = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n                "});
+            marker_1d24e244504c39aae97539a7f649d6d4.setIcon(div_icon_bd27f082606f2ad42d7f081b42127f7b);
+        
+    
+        var popup_7c2f2e5ffb16909780ce4a000209b8af = L.popup({"maxWidth": 300});
+
+        
+            var html_3c401c4fdc707bbc4d8e0d5aac90278b = $(`<div id="html_3c401c4fdc707bbc4d8e0d5aac90278b" style="width: 100.0%; height: 100.0%;"><b>1. Hand, Charles Richard</b><br>2357 S Tamiami Trail Unit 3, No. 164 Venice, Florida 34293</div>`)[0];
+            popup_7c2f2e5ffb16909780ce4a000209b8af.setContent(html_3c401c4fdc707bbc4d8e0d5aac90278b);
+        
+
+        marker_1d24e244504c39aae97539a7f649d6d4.bindPopup(popup_7c2f2e5ffb16909780ce4a000209b8af)
+        ;
+
+        
+    
+    
+            var marker_7ab44982cfe6cb2367f94654690793e0 = L.marker(
+                [27.0473556, -82.4107918],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_9bcdbf04c2ad3134d8e8365e525cf402 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n                "});
+            marker_7ab44982cfe6cb2367f94654690793e0.setIcon(div_icon_9bcdbf04c2ad3134d8e8365e525cf402);
+        
+    
+        var popup_325de4d689822cc9d6a2a7d2c03fa51d = L.popup({"maxWidth": 300});
+
+        
+            var html_412a234b2800d819e53ff9ad37ccf766 = $(`<div id="html_412a234b2800d819e53ff9ad37ccf766" style="width: 100.0%; height: 100.0%;"><b>2. Demarree, Melinda Adella</b><br>370 Porpoise Rd Venice, Florida 34293-5826</div>`)[0];
+            popup_325de4d689822cc9d6a2a7d2c03fa51d.setContent(html_412a234b2800d819e53ff9ad37ccf766);
+        
+
+        marker_7ab44982cfe6cb2367f94654690793e0.bindPopup(popup_325de4d689822cc9d6a2a7d2c03fa51d)
+        ;
+
+        
+    
+    
+            var marker_63a8eaab5f5e4ae1df62d58efa0cd67c = L.marker(
+                [27.0473018, -82.4071519],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_798801f4390056884aa978d5f6801c35 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n                "});
+            marker_63a8eaab5f5e4ae1df62d58efa0cd67c.setIcon(div_icon_798801f4390056884aa978d5f6801c35);
+        
+    
+        var popup_ad7efbd5c494a0b09a8884318c7c1b6d = L.popup({"maxWidth": 300});
+
+        
+            var html_179a27d37c688ba37592a9c0313abf0a = $(`<div id="html_179a27d37c688ba37592a9c0313abf0a" style="width: 100.0%; height: 100.0%;"><b>3. Exline, Anthony & Casarah</b><br>151 Southland Rd Venice, Florida 34293-5884</div>`)[0];
+            popup_ad7efbd5c494a0b09a8884318c7c1b6d.setContent(html_179a27d37c688ba37592a9c0313abf0a);
+        
+
+        marker_63a8eaab5f5e4ae1df62d58efa0cd67c.bindPopup(popup_ad7efbd5c494a0b09a8884318c7c1b6d)
+        ;
+
+        
+    
+    
+            var marker_3ddc5e783014e8b25e09edb42953f829 = L.marker(
+                [27.0471346, -82.4104285],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_46c0f12393240819138a9f4449b5609e = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n                "});
+            marker_3ddc5e783014e8b25e09edb42953f829.setIcon(div_icon_46c0f12393240819138a9f4449b5609e);
+        
+    
+        var popup_20f519ec652e019e107b11c18219d974 = L.popup({"maxWidth": 300});
+
+        
+            var html_cd667f513f828f593b591958a380090a = $(`<div id="html_cd667f513f828f593b591958a380090a" style="width: 100.0%; height: 100.0%;"><b>4. Idahosa, Stephen Azeta</b><br>361 Porpoise Rd. Venice, Florida 34292</div>`)[0];
+            popup_20f519ec652e019e107b11c18219d974.setContent(html_cd667f513f828f593b591958a380090a);
+        
+
+        marker_3ddc5e783014e8b25e09edb42953f829.bindPopup(popup_20f519ec652e019e107b11c18219d974)
+        ;
+
+        
+    
+    
+            var marker_c085df9f7512878e18fb7139b49130ef = L.marker(
+                [27.0470556, -82.4207984],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_d002f13f8ee9d6e0883e8f1cdc3407a0 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n                "});
+            marker_c085df9f7512878e18fb7139b49130ef.setIcon(div_icon_d002f13f8ee9d6e0883e8f1cdc3407a0);
+        
+    
+        var popup_caa156c520830b06d57dbc33106b4804 = L.popup({"maxWidth": 300});
+
+        
+            var html_9be6db8fbebdec4feea6acea630f68c2 = $(`<div id="html_9be6db8fbebdec4feea6acea630f68c2" style="width: 100.0%; height: 100.0%;"><b>5. Gustafson, Rita M.</b><br>1042 Linden Road Venice, Florida 34293</div>`)[0];
+            popup_caa156c520830b06d57dbc33106b4804.setContent(html_9be6db8fbebdec4feea6acea630f68c2);
+        
+
+        marker_c085df9f7512878e18fb7139b49130ef.bindPopup(popup_caa156c520830b06d57dbc33106b4804)
+        ;
+
+        
+    
+    
+            var marker_38eb63fa00e436d7baa9a470919a25bd = L.marker(
+                [27.0460986, -82.4144939999999],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_8bf4f484517e27f7c96a22edd27a6929 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n                "});
+            marker_38eb63fa00e436d7baa9a470919a25bd.setIcon(div_icon_8bf4f484517e27f7c96a22edd27a6929);
+        
+    
+        var popup_ff8fd91b53c306e907f294942beccd88 = L.popup({"maxWidth": 300});
+
+        
+            var html_ee086e465953b705bb98d81372f38a2d = $(`<div id="html_ee086e465953b705bb98d81372f38a2d" style="width: 100.0%; height: 100.0%;"><b>6. Epeards, Russell M & Lorraine</b><br>680 Treasure Rd Venice, Florida 34293</div>`)[0];
+            popup_ff8fd91b53c306e907f294942beccd88.setContent(html_ee086e465953b705bb98d81372f38a2d);
+        
+
+        marker_38eb63fa00e436d7baa9a470919a25bd.bindPopup(popup_ff8fd91b53c306e907f294942beccd88)
+        ;
+
+        
+    
+    
+            var marker_8e27936ccd35eb4b7959f701803e3db2 = L.marker(
+                [27.0441772, -82.4176698],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_0f6c404a4ee09b677ed3ac385c9841be = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    7\n                \u003c/div\u003e\n                "});
+            marker_8e27936ccd35eb4b7959f701803e3db2.setIcon(div_icon_0f6c404a4ee09b677ed3ac385c9841be);
+        
+    
+        var popup_1ce287abd6696747eb6b78523f924e09 = L.popup({"maxWidth": 300});
+
+        
+            var html_bc738e236c4591d4761d55674c5170ed = $(`<div id="html_bc738e236c4591d4761d55674c5170ed" style="width: 100.0%; height: 100.0%;"><b>7. Bouffard, David & Amy</b><br>4447 Meridian Rd Venice, Florida 34293-6132</div>`)[0];
+            popup_1ce287abd6696747eb6b78523f924e09.setContent(html_bc738e236c4591d4761d55674c5170ed);
+        
+
+        marker_8e27936ccd35eb4b7959f701803e3db2.bindPopup(popup_1ce287abd6696747eb6b78523f924e09)
+        ;
+
+        
+    
+    
+            var marker_a6f62cd32baa76de155a64cf85c75fc9 = L.marker(
+                [27.0425884, -82.4201769],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_6c52460d2653e2402cb457f4c20d948c = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    8\n                \u003c/div\u003e\n                "});
+            marker_a6f62cd32baa76de155a64cf85c75fc9.setIcon(div_icon_6c52460d2653e2402cb457f4c20d948c);
+        
+    
+        var popup_3a690fcdb76852cc3a1a94b9a557773f = L.popup({"maxWidth": 300});
+
+        
+            var html_bc9c57a6e284cecaa5aecfc03b62ea91 = $(`<div id="html_bc9c57a6e284cecaa5aecfc03b62ea91" style="width: 100.0%; height: 100.0%;"><b>8. Taylor, Shannon Nicole</b><br>1207 Falcon Road Venice, Florida 34293-6115</div>`)[0];
+            popup_3a690fcdb76852cc3a1a94b9a557773f.setContent(html_bc9c57a6e284cecaa5aecfc03b62ea91);
+        
+
+        marker_a6f62cd32baa76de155a64cf85c75fc9.bindPopup(popup_3a690fcdb76852cc3a1a94b9a557773f)
+        ;
+
+        
+    
+    
+            var marker_0fec39ac4682be8722d289b6cb180569 = L.marker(
+                [27.0412276, -82.4033117],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_dadaa24c1708b7d4bbe587e3d6c6fac5 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    9\n                \u003c/div\u003e\n                "});
+            marker_0fec39ac4682be8722d289b6cb180569.setIcon(div_icon_dadaa24c1708b7d4bbe587e3d6c6fac5);
+        
+    
+        var popup_24695884aa1139fa2f9a17f2fc772856 = L.popup({"maxWidth": 300});
+
+        
+            var html_28aaa072cb2809a56ccf78ece34c8d56 = $(`<div id="html_28aaa072cb2809a56ccf78ece34c8d56" style="width: 100.0%; height: 100.0%;"><b>9. Metzger, Joseph Anthony & Krista</b><br>155 Shell Rd Venice, Florida 34293-7807</div>`)[0];
+            popup_24695884aa1139fa2f9a17f2fc772856.setContent(html_28aaa072cb2809a56ccf78ece34c8d56);
+        
+
+        marker_0fec39ac4682be8722d289b6cb180569.bindPopup(popup_24695884aa1139fa2f9a17f2fc772856)
+        ;
+
+        
+    
+    
+            var marker_ca3a570cc102ed9a98323100a77b165e = L.marker(
+                [27.0408825, -82.4151602],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_872bce347a7068003da2a3ef0a0d884a = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    10\n                \u003c/div\u003e\n                "});
+            marker_ca3a570cc102ed9a98323100a77b165e.setIcon(div_icon_872bce347a7068003da2a3ef0a0d884a);
+        
+    
+        var popup_6a813fde0bbe98a84d1f6f009f8d379b = L.popup({"maxWidth": 300});
+
+        
+            var html_e8a9e4c4c1d6d26bac11a9153719f92c = $(`<div id="html_e8a9e4c4c1d6d26bac11a9153719f92c" style="width: 100.0%; height: 100.0%;"><b>10. Sanchez, Robert Arthur</b><br>950 Poinciana Rd Venice, Florida 34293-6249</div>`)[0];
+            popup_6a813fde0bbe98a84d1f6f009f8d379b.setContent(html_e8a9e4c4c1d6d26bac11a9153719f92c);
+        
+
+        marker_ca3a570cc102ed9a98323100a77b165e.bindPopup(popup_6a813fde0bbe98a84d1f6f009f8d379b)
+        ;
+
+        
+    
+    
+            var marker_764b3f83b06be5479125ca903fd29935 = L.marker(
+                [27.0406944, -82.4068984],
+                {}
+            ).addTo(map_b9a772f6b43293c154e2d16cd8304c6f);
+        
+    
+            var div_icon_49304c0ddea44c0d431795aad40a5f94 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #03639c; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    11\n                \u003c/div\u003e\n                "});
+            marker_764b3f83b06be5479125ca903fd29935.setIcon(div_icon_49304c0ddea44c0d431795aad40a5f94);
+        
+    
+        var popup_92826e556b4b39ca62ec1a33ffd46fe0 = L.popup({"maxWidth": 300});
+
+        
+            var html_451f41e8bc1d439e57750447e8e102d2 = $(`<div id="html_451f41e8bc1d439e57750447e8e102d2" style="width: 100.0%; height: 100.0%;"><b>11. Dooley, Melissa J.</b><br>4732 Pompano Rd Venice, Florida 34293-7841</div>`)[0];
+            popup_92826e556b4b39ca62ec1a33ffd46fe0.setContent(html_451f41e8bc1d439e57750447e8e102d2);
+        
+
+        marker_764b3f83b06be5479125ca903fd29935.bindPopup(popup_92826e556b4b39ca62ec1a33ffd46fe0)
+        ;
+
+        
+    
+</script>
+</html>
