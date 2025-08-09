@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8de77f1c7b15d5b503e35ec5059d36dc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <link href="tooplate-neural-style.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- INSTANT AI 5 Logo -->
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                    <circle cx="25" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="75" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                    
+                    <!-- Connections -->
+                    <line x1="50" y1="28" x2="25" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="28" x2="75" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="25" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="75" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    
+                    <!-- Center node -->
+                    <circle cx="50" cy="50" r="5" fill="#00ffff"/>
+                    <line x1="50" y1="28" x2="50" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="55" x2="50" y2="72" stroke="#ffff00" stroke-width="1" opacity="0.6"/>
+                    <line x1="33" y1="50" x2="45" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="55" y1="50" x2="67" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">INSTANT AI 5</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+<!--                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 320px; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; color:black; padding: 10px;'><b>Group 5 Members (North → South; West → East)</b><br><hr style='margin:4px 0;'><b>1</b>. Lukens, Matt<br><b>2</b>. Mitchell, Jonathan Richmond<br><b>3</b>. Samuels, Troy Richard & Jennifer<br><b>4</b>. Riquino, Fernando & Tammi<br><b>5</b>. Burling Ibarguen, Michael A. & Sophia<br><b>6</b>. Williams, David & Sundee<br><b>7</b>. Streeter, Sabrina<br><b>8</b>. Woodruff, Dave & Maryanne<br></div>
+    
+            <div class="folium-map" id="map_8de77f1c7b15d5b503e35ec5059d36dc" ></div>
+    <script src="tooplate-neural-scripts.js"></script>
+        
+</body>
+<script>
+    
+    
+            var map_8de77f1c7b15d5b503e35ec5059d36dc = L.map(
+                "map_8de77f1c7b15d5b503e35ec5059d36dc",
+                {
+                    center: [27.1271066125, -82.37090698749999],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2105413b09ec363aef41528d850d0189 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8de77f1c7b15d5b503e35ec5059d36dc);
+        
+    
+            var polygon_f333ee83577032368fbc890504419ec9 = L.polygon(
+                [[27.1238181, -82.3695352], [27.1240321, -82.378446], [27.1318462, -82.380746], [27.1294349, -82.3697462], [27.1271798, -82.3654708999999], [27.124234, -82.3603], [27.1238181, -82.3695352]],
+                {"bubblingMouseEvents": true, "color": "#f2953a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2953a", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_8de77f1c7b15d5b503e35ec5059d36dc);
+        
+    
+            var marker_cluster_29078a83145d247509908e0fe0f78c5f = L.markerClusterGroup(
+                {"showCoverageOnHover": false, "spiderfyOnMaxZoom": true}
+            );
+            map_8de77f1c7b15d5b503e35ec5059d36dc.addLayer(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var marker_468f188d3be2ce5e99a5f18ab5287d60 = L.marker(
+                [27.1318462, -82.380746],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_df7b70007191bf99e96cf79ae673432f = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n            "});
+            marker_468f188d3be2ce5e99a5f18ab5287d60.setIcon(div_icon_df7b70007191bf99e96cf79ae673432f);
+        
+    
+        var popup_35c089594d7c02cefdb62bfff47301ca = L.popup({"maxWidth": 320});
+
+        
+            var html_cab3725a990ac35a68275c4754512856 = $(`<div id="html_cab3725a990ac35a68275c4754512856" style="width: 100.0%; height: 100.0%;"><b>1. Lukens, Matt</b><br>228 Caserta Ct Nokomis, Florida 34275-2259</div>`)[0];
+            popup_35c089594d7c02cefdb62bfff47301ca.setContent(html_cab3725a990ac35a68275c4754512856);
+        
+
+        marker_468f188d3be2ce5e99a5f18ab5287d60.bindPopup(popup_35c089594d7c02cefdb62bfff47301ca)
+        ;
+
+        
+    
+    
+            var marker_f35d85037f129d0dbbd2afd0a92ef433 = L.marker(
+                [27.1312006, -82.3800133],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_790492f42e55b648c5214ab15bca4451 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n            "});
+            marker_f35d85037f129d0dbbd2afd0a92ef433.setIcon(div_icon_790492f42e55b648c5214ab15bca4451);
+        
+    
+        var popup_2d7947904b100204020a4cd1c49f7e4d = L.popup({"maxWidth": 320});
+
+        
+            var html_eed178f940a56506113c6f80c5a803e0 = $(`<div id="html_eed178f940a56506113c6f80c5a803e0" style="width: 100.0%; height: 100.0%;"><b>2. Mitchell, Jonathan Richmond</b><br>204 Caserta Ct Nokomis, Florida 34275-2259</div>`)[0];
+            popup_2d7947904b100204020a4cd1c49f7e4d.setContent(html_eed178f940a56506113c6f80c5a803e0);
+        
+
+        marker_f35d85037f129d0dbbd2afd0a92ef433.bindPopup(popup_2d7947904b100204020a4cd1c49f7e4d)
+        ;
+
+        
+    
+    
+            var marker_825c9a65429601e9b0230db99e7cf923 = L.marker(
+                [27.1294349, -82.3697462],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_5825da66eb6165636841f318ca5618d0 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n            "});
+            marker_825c9a65429601e9b0230db99e7cf923.setIcon(div_icon_5825da66eb6165636841f318ca5618d0);
+        
+    
+        var popup_0c93ed25da8ff10e134e004d4094ab4f = L.popup({"maxWidth": 320});
+
+        
+            var html_9390e877579934ce4b0f45792ab950b0 = $(`<div id="html_9390e877579934ce4b0f45792ab950b0" style="width: 100.0%; height: 100.0%;"><b>3. Samuels, Troy Richard & Jennifer</b><br>280 Palmaria Ct Nokomis, Florida 34275-5611</div>`)[0];
+            popup_0c93ed25da8ff10e134e004d4094ab4f.setContent(html_9390e877579934ce4b0f45792ab950b0);
+        
+
+        marker_825c9a65429601e9b0230db99e7cf923.bindPopup(popup_0c93ed25da8ff10e134e004d4094ab4f)
+        ;
+
+        
+    
+    
+            var marker_719fb693cca68f81718dc9a2d61234e1 = L.marker(
+                [27.1271798, -82.3654708999999],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_bec12671c47fe36708a1105514ac426a = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n            "});
+            marker_719fb693cca68f81718dc9a2d61234e1.setIcon(div_icon_bec12671c47fe36708a1105514ac426a);
+        
+    
+        var popup_549731078cccc2b8cda9efae0f18d703 = L.popup({"maxWidth": 320});
+
+        
+            var html_2887ac26f530fb06a1f6d225de35e336 = $(`<div id="html_2887ac26f530fb06a1f6d225de35e336" style="width: 100.0%; height: 100.0%;"><b>4. Riquino, Fernando & Tammi</b><br>277 Daylily Blvd Nokomis, Florida 34275-1758</div>`)[0];
+            popup_549731078cccc2b8cda9efae0f18d703.setContent(html_2887ac26f530fb06a1f6d225de35e336);
+        
+
+        marker_719fb693cca68f81718dc9a2d61234e1.bindPopup(popup_549731078cccc2b8cda9efae0f18d703)
+        ;
+
+        
+    
+    
+            var marker_721fb873e1c14c398006be3f03cb25cf = L.marker(
+                [27.1251072, -82.3629983],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_64a2cca3bbf7ea880df1903a14ae7951 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n            "});
+            marker_721fb873e1c14c398006be3f03cb25cf.setIcon(div_icon_64a2cca3bbf7ea880df1903a14ae7951);
+        
+    
+        var popup_4958d5a1500625bd79a072b4d7d4e50c = L.popup({"maxWidth": 320});
+
+        
+            var html_5291e316df807d8602d484d7edb02234 = $(`<div id="html_5291e316df807d8602d484d7edb02234" style="width: 100.0%; height: 100.0%;"><b>5. Burling Ibarguen, Michael A. & Sophia</b><br>208 Daylily Blvd Nokomis, Florida 34275-1757</div>`)[0];
+            popup_4958d5a1500625bd79a072b4d7d4e50c.setContent(html_5291e316df807d8602d484d7edb02234);
+        
+
+        marker_721fb873e1c14c398006be3f03cb25cf.bindPopup(popup_4958d5a1500625bd79a072b4d7d4e50c)
+        ;
+
+        
+    
+    
+            var marker_0c5c6fea79befbd6578d347a406e69f2 = L.marker(
+                [27.124234, -82.3603],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_4eb846974c38a153803e72c5f3eeefd2 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n            "});
+            marker_0c5c6fea79befbd6578d347a406e69f2.setIcon(div_icon_4eb846974c38a153803e72c5f3eeefd2);
+        
+    
+        var popup_82fe42284c769e74baa5d0356be6f58b = L.popup({"maxWidth": 320});
+
+        
+            var html_14b339d86a8699ac66a803a6210b89d6 = $(`<div id="html_14b339d86a8699ac66a803a6210b89d6" style="width: 100.0%; height: 100.0%;"><b>6. Williams, David & Sundee</b><br>485 Baneberry Ct Nokomis, Florida 34275-1740</div>`)[0];
+            popup_82fe42284c769e74baa5d0356be6f58b.setContent(html_14b339d86a8699ac66a803a6210b89d6);
+        
+
+        marker_0c5c6fea79befbd6578d347a406e69f2.bindPopup(popup_82fe42284c769e74baa5d0356be6f58b)
+        ;
+
+        
+    
+    
+            var marker_f96188db082b239a220f6a9779d93b89 = L.marker(
+                [27.1240321, -82.378446],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_626ee1a2b71e523940e2a732d9f80897 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    7\n                \u003c/div\u003e\n            "});
+            marker_f96188db082b239a220f6a9779d93b89.setIcon(div_icon_626ee1a2b71e523940e2a732d9f80897);
+        
+    
+        var popup_0bb3a2ddbee57c6aecb818a8f79bc6e2 = L.popup({"maxWidth": 320});
+
+        
+            var html_871e220b75f8404a5c206154a85449cb = $(`<div id="html_871e220b75f8404a5c206154a85449cb" style="width: 100.0%; height: 100.0%;"><b>7. Streeter, Sabrina</b><br>212 Marcheno Way Nokomis, Florida 34275-2156</div>`)[0];
+            popup_0bb3a2ddbee57c6aecb818a8f79bc6e2.setContent(html_871e220b75f8404a5c206154a85449cb);
+        
+
+        marker_f96188db082b239a220f6a9779d93b89.bindPopup(popup_0bb3a2ddbee57c6aecb818a8f79bc6e2)
+        ;
+
+        
+    
+    
+            var marker_43bdcc85464e53f378087ee4e8fe6437 = L.marker(
+                [27.1238181, -82.3695352],
+                {}
+            ).addTo(marker_cluster_29078a83145d247509908e0fe0f78c5f);
+        
+    
+            var div_icon_ba69f01730954a1a1fc70dcf463d3c9c = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #f2953a; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    8\n                \u003c/div\u003e\n            "});
+            marker_43bdcc85464e53f378087ee4e8fe6437.setIcon(div_icon_ba69f01730954a1a1fc70dcf463d3c9c);
+        
+    
+        var popup_608511f1d7442fb83def38251238940b = L.popup({"maxWidth": 320});
+
+        
+            var html_34b57dd418fb9d88c5e94b19a66358a5 = $(`<div id="html_34b57dd418fb9d88c5e94b19a66358a5" style="width: 100.0%; height: 100.0%;"><b>8. Woodruff, Dave & Maryanne</b><br>244 Brienza Loop Nokomis, Florida 34275-5603</div>`)[0];
+            popup_608511f1d7442fb83def38251238940b.setContent(html_34b57dd418fb9d88c5e94b19a66358a5);
+        
+
+        marker_43bdcc85464e53f378087ee4e8fe6437.bindPopup(popup_608511f1d7442fb83def38251238940b)
+        ;
+
+        
+    
+</script>
+</html>

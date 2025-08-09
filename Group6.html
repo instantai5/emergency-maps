@@ -1,0 +1,439 @@
+1.  Goes in the <head> section just above the </head> tag:
+2.  Goes in the top of the <body> tag:
+3.  Goes at the end of the doc after the </script> tag but before the end </body> tag:
+4.  Change legend color back to black by adding color style to style statement in legend:
+     color:Black;
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a6c328474b8ca04b0564917613398671 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <link href="tooplate-neural-style.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- INSTANT AI 5 Logo -->
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                    <circle cx="25" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="75" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                    
+                    <!-- Connections -->
+                    <line x1="50" y1="28" x2="25" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="28" x2="75" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="25" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="75" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    
+                    <!-- Center node -->
+                    <circle cx="50" cy="50" r="5" fill="#00ffff"/>
+                    <line x1="50" y1="28" x2="50" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="55" x2="50" y2="72" stroke="#ffff00" stroke-width="1" opacity="0.6"/>
+                    <line x1="33" y1="50" x2="45" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="55" y1="50" x2="67" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">INSTANT AI 5</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+<!--                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 320px; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; color:black; padding: 10px;'><b>Group 6 Members (North → South; West → East)</b><br><hr style='margin:4px 0;'><b>1</b>. Olsen, Richard Dean<br><b>2</b>. Linn, Mary K.<br><b>3</b>. Arrieta, Julio & Marysol<br><b>4</b>. Sullivan, Stephanie<br><b>5</b>. Mather, Robert S. & Oreta Mae<br><b>6</b>. Cammer, C. Dev & Peggy<br><b>7</b>. Smith, Phillip<br><b>8</b>. DeMott, Mary<br><b>9</b>. Cuddy, James Raulen & Shirley<br><b>10</b>. Carlson, David Carl<br><b>11</b>. Sands, Paul Richard<br><b>12</b>. Liard, James Mark & Debra<br><b>13</b>. Guerrero, Manuel<br></div>
+    
+            <div class="folium-map" id="map_a6c328474b8ca04b0564917613398671" ></div>
+    <script src="tooplate-neural-scripts.js"></script>
+        
+</body>
+<script>
+    
+    
+            var map_a6c328474b8ca04b0564917613398671 = L.map(
+                "map_a6c328474b8ca04b0564917613398671",
+                {
+                    center: [27.12129156923077, -82.44071469999997],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f013dddae6feb45c4649cf073134e0e2 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a6c328474b8ca04b0564917613398671);
+        
+    
+            var polygon_21400df706c225d624e7176b8c3fbcdb = L.polygon(
+                [[27.109794, -82.4455492], [27.1177898, -82.4505803], [27.1404869, -82.4364456], [27.1112083, -82.4347428], [27.109794, -82.4455492]],
+                {"bubblingMouseEvents": true, "color": "#9f3538", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9f3538", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_a6c328474b8ca04b0564917613398671);
+        
+    
+            var marker_cluster_bcd9d4403e90beab9d9991f509ac9f34 = L.markerClusterGroup(
+                {"showCoverageOnHover": false, "spiderfyOnMaxZoom": true}
+            );
+            map_a6c328474b8ca04b0564917613398671.addLayer(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var marker_002b3a3e4175b393dee1e9f1870b3590 = L.marker(
+                [27.1404869, -82.4364456],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_88d7da7db5139177339bb393dddd0d3f = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n            "});
+            marker_002b3a3e4175b393dee1e9f1870b3590.setIcon(div_icon_88d7da7db5139177339bb393dddd0d3f);
+        
+    
+        var popup_b4ee4d067ed997c99039fe772dfdad78 = L.popup({"maxWidth": 320});
+
+        
+            var html_cf08406c3f80c4af93ee32f27dc86057 = $(`<div id="html_cf08406c3f80c4af93ee32f27dc86057" style="width: 100.0%; height: 100.0%;"><b>1. Olsen, Richard Dean</b><br>1074 Sorrento Woods Blvd Nokomis, Florida 34275-4516</div>`)[0];
+            popup_b4ee4d067ed997c99039fe772dfdad78.setContent(html_cf08406c3f80c4af93ee32f27dc86057);
+        
+
+        marker_002b3a3e4175b393dee1e9f1870b3590.bindPopup(popup_b4ee4d067ed997c99039fe772dfdad78)
+        ;
+
+        
+    
+    
+            var marker_e8091fc5f7b0209e27b0a7598e1f71e7 = L.marker(
+                [27.1293425, -82.4388685],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_87f37f27179e651ffc40d4f3ccd11eed = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n            "});
+            marker_e8091fc5f7b0209e27b0a7598e1f71e7.setIcon(div_icon_87f37f27179e651ffc40d4f3ccd11eed);
+        
+    
+        var popup_c4f791ca89844208923e2eb165e6e999 = L.popup({"maxWidth": 320});
+
+        
+            var html_84c403c5c52434641f5b8781c2cf5fc5 = $(`<div id="html_84c403c5c52434641f5b8781c2cf5fc5" style="width: 100.0%; height: 100.0%;"><b>2. Linn, Mary K.</b><br>400 Ravenna St N Nokomis, Florida 34275-2332</div>`)[0];
+            popup_c4f791ca89844208923e2eb165e6e999.setContent(html_84c403c5c52434641f5b8781c2cf5fc5);
+        
+
+        marker_e8091fc5f7b0209e27b0a7598e1f71e7.bindPopup(popup_c4f791ca89844208923e2eb165e6e999)
+        ;
+
+        
+    
+    
+            var marker_0441d31026e31a9d9b2a664239865b60 = L.marker(
+                [27.1286307, -82.4422764999999],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_3f134d2e84904c78d06a279d6c89535a = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n            "});
+            marker_0441d31026e31a9d9b2a664239865b60.setIcon(div_icon_3f134d2e84904c78d06a279d6c89535a);
+        
+    
+        var popup_04f8adeef02f1df82ef660fcbf98f4dc = L.popup({"maxWidth": 320});
+
+        
+            var html_aa6d1444030a3e5651a5889e235f2e4a = $(`<div id="html_aa6d1444030a3e5651a5889e235f2e4a" style="width: 100.0%; height: 100.0%;"><b>3. Arrieta, Julio & Marysol</b><br>870 Hillcrest Dr Nokomis, Florida 34275-2374</div>`)[0];
+            popup_04f8adeef02f1df82ef660fcbf98f4dc.setContent(html_aa6d1444030a3e5651a5889e235f2e4a);
+        
+
+        marker_0441d31026e31a9d9b2a664239865b60.bindPopup(popup_04f8adeef02f1df82ef660fcbf98f4dc)
+        ;
+
+        
+    
+    
+            var marker_739b9067310e5eaef0b04b774c6e1efb = L.marker(
+                [27.1273847, -82.4388192999999],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_e1aff9c39e3d00a17f39ba6d168b5600 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n            "});
+            marker_739b9067310e5eaef0b04b774c6e1efb.setIcon(div_icon_e1aff9c39e3d00a17f39ba6d168b5600);
+        
+    
+        var popup_291870a81be6fa948dc5d49af4f2154e = L.popup({"maxWidth": 320});
+
+        
+            var html_12ceb0158c7aac6690aeaf1c543df20e = $(`<div id="html_12ceb0158c7aac6690aeaf1c543df20e" style="width: 100.0%; height: 100.0%;"><b>4. Sullivan, Stephanie</b><br>213 Jessica St Unit B Nokomis, Florida 34275-2840</div>`)[0];
+            popup_291870a81be6fa948dc5d49af4f2154e.setContent(html_12ceb0158c7aac6690aeaf1c543df20e);
+        
+
+        marker_739b9067310e5eaef0b04b774c6e1efb.bindPopup(popup_291870a81be6fa948dc5d49af4f2154e)
+        ;
+
+        
+    
+    
+            var marker_1042edd6affcd24d551f64101e979d38 = L.marker(
+                [27.1219563, -82.4422718],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_0d158f2f7abc8646684baa6d9ef2f3a3 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n            "});
+            marker_1042edd6affcd24d551f64101e979d38.setIcon(div_icon_0d158f2f7abc8646684baa6d9ef2f3a3);
+        
+    
+        var popup_55a92ffccc133637d031bf15ff86c9e0 = L.popup({"maxWidth": 320});
+
+        
+            var html_ab43866fb10e9e4f62d4423d9ba3d46d = $(`<div id="html_ab43866fb10e9e4f62d4423d9ba3d46d" style="width: 100.0%; height: 100.0%;"><b>5. Mather, Robert S. & Oreta Mae</b><br>707 Matland Nokomis, Florida 34275</div>`)[0];
+            popup_55a92ffccc133637d031bf15ff86c9e0.setContent(html_ab43866fb10e9e4f62d4423d9ba3d46d);
+        
+
+        marker_1042edd6affcd24d551f64101e979d38.bindPopup(popup_55a92ffccc133637d031bf15ff86c9e0)
+        ;
+
+        
+    
+    
+            var marker_7575d966268c7b3b305388752be9de68 = L.marker(
+                [27.1218118, -82.4371261],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_19f7ad8325021f00bd4728fa6fb02dd8 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n            "});
+            marker_7575d966268c7b3b305388752be9de68.setIcon(div_icon_19f7ad8325021f00bd4728fa6fb02dd8);
+        
+    
+        var popup_ae17de918ade4aab76b6a70c42812e0a = L.popup({"maxWidth": 320});
+
+        
+            var html_fa9ed4aec9709938c681e3b82a271aab = $(`<div id="html_fa9ed4aec9709938c681e3b82a271aab" style="width: 100.0%; height: 100.0%;"><b>6. Cammer, C. Dev & Peggy</b><br>51 Orange Blossom St Nokomis, Florida 34275-2828</div>`)[0];
+            popup_ae17de918ade4aab76b6a70c42812e0a.setContent(html_fa9ed4aec9709938c681e3b82a271aab);
+        
+
+        marker_7575d966268c7b3b305388752be9de68.bindPopup(popup_ae17de918ade4aab76b6a70c42812e0a)
+        ;
+
+        
+    
+    
+            var marker_28b8ee2eb6bec5a097a1cb8966d8f227 = L.marker(
+                [27.1202432, -82.4400017],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_05498eea236a9b9e00e25ca6428f2de2 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    7\n                \u003c/div\u003e\n            "});
+            marker_28b8ee2eb6bec5a097a1cb8966d8f227.setIcon(div_icon_05498eea236a9b9e00e25ca6428f2de2);
+        
+    
+        var popup_b01d0f52f9ca1a636c2032fdced8d79a = L.popup({"maxWidth": 320});
+
+        
+            var html_cd6fcbb20763217fc55292af8118b9a6 = $(`<div id="html_cd6fcbb20763217fc55292af8118b9a6" style="width: 100.0%; height: 100.0%;"><b>7. Smith, Phillip</b><br>512 River Blvd S Nokomis, Florida 34275-2813</div>`)[0];
+            popup_b01d0f52f9ca1a636c2032fdced8d79a.setContent(html_cd6fcbb20763217fc55292af8118b9a6);
+        
+
+        marker_28b8ee2eb6bec5a097a1cb8966d8f227.bindPopup(popup_b01d0f52f9ca1a636c2032fdced8d79a)
+        ;
+
+        
+    
+    
+            var marker_c40b005b6e4738fd51a93bbc1a88b878 = L.marker(
+                [27.1191386, -82.4454674999999],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_8a1c00cc0e3bee79da6a76548b1c96e9 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    8\n                \u003c/div\u003e\n            "});
+            marker_c40b005b6e4738fd51a93bbc1a88b878.setIcon(div_icon_8a1c00cc0e3bee79da6a76548b1c96e9);
+        
+    
+        var popup_2544986075da4bfb2592c4604f851bb8 = L.popup({"maxWidth": 320});
+
+        
+            var html_efaba60ceca3ccb294f3171061d7a988 = $(`<div id="html_efaba60ceca3ccb294f3171061d7a988" style="width: 100.0%; height: 100.0%;"><b>8. DeMott, Mary</b><br>402-A Colonia Ln E #E #A Nokomis, Florida 34275</div>`)[0];
+            popup_2544986075da4bfb2592c4604f851bb8.setContent(html_efaba60ceca3ccb294f3171061d7a988);
+        
+
+        marker_c40b005b6e4738fd51a93bbc1a88b878.bindPopup(popup_2544986075da4bfb2592c4604f851bb8)
+        ;
+
+        
+    
+    
+            var marker_ebc27ee9277074947ea3e49646b3b158 = L.marker(
+                [27.1177953, -82.441859],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_c56fc7ef4343088ef6d307c4a884678d = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    9\n                \u003c/div\u003e\n            "});
+            marker_ebc27ee9277074947ea3e49646b3b158.setIcon(div_icon_c56fc7ef4343088ef6d307c4a884678d);
+        
+    
+        var popup_0f0552cea6163d06303a6323cabdf3b4 = L.popup({"maxWidth": 320});
+
+        
+            var html_c73633ff4685ffe68d366f2c5317e01d = $(`<div id="html_c73633ff4685ffe68d366f2c5317e01d" style="width: 100.0%; height: 100.0%;"><b>9. Cuddy, James Raulen & Shirley</b><br>602 Roberts Bay Dr Nokomis, Florida 34275</div>`)[0];
+            popup_0f0552cea6163d06303a6323cabdf3b4.setContent(html_c73633ff4685ffe68d366f2c5317e01d);
+        
+
+        marker_ebc27ee9277074947ea3e49646b3b158.bindPopup(popup_0f0552cea6163d06303a6323cabdf3b4)
+        ;
+
+        
+    
+    
+            var marker_9b8966192a86e727d3aa5dd000ea4d44 = L.marker(
+                [27.1177898, -82.4505803],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_50d4878869751f60f5b0fc2bb90a1281 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    10\n                \u003c/div\u003e\n            "});
+            marker_9b8966192a86e727d3aa5dd000ea4d44.setIcon(div_icon_50d4878869751f60f5b0fc2bb90a1281);
+        
+    
+        var popup_4138e924c3774522455a2bdf86fc157a = L.popup({"maxWidth": 320});
+
+        
+            var html_05e46c927051814d927fe0c8fbde5448 = $(`<div id="html_05e46c927051814d927fe0c8fbde5448" style="width: 100.0%; height: 100.0%;"><b>10. Carlson, David Carl</b><br>649 Tamiami Trl S Unit No. 311 Venice, Florida 34285-3200</div>`)[0];
+            popup_4138e924c3774522455a2bdf86fc157a.setContent(html_05e46c927051814d927fe0c8fbde5448);
+        
+
+        marker_9b8966192a86e727d3aa5dd000ea4d44.bindPopup(popup_4138e924c3774522455a2bdf86fc157a)
+        ;
+
+        
+    
+    
+            var marker_5d8fb675641d355e47b902c6c96a42fc = L.marker(
+                [27.1112083, -82.4352828],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_c0b2d6f1693bdd27d75a4227a7b91ddd = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    11\n                \u003c/div\u003e\n            "});
+            marker_5d8fb675641d355e47b902c6c96a42fc.setIcon(div_icon_c0b2d6f1693bdd27d75a4227a7b91ddd);
+        
+    
+        var popup_157936e6729c8a130313339864b4a9a8 = L.popup({"maxWidth": 320});
+
+        
+            var html_a99325f85184438d2f5d509cb634e005 = $(`<div id="html_a99325f85184438d2f5d509cb634e005" style="width: 100.0%; height: 100.0%;"><b>11. Sands, Paul Richard</b><br>622 Bird Bay Dr S Apt 101 Venice, Florida 34285-6245</div>`)[0];
+            popup_157936e6729c8a130313339864b4a9a8.setContent(html_a99325f85184438d2f5d509cb634e005);
+        
+
+        marker_5d8fb675641d355e47b902c6c96a42fc.bindPopup(popup_157936e6729c8a130313339864b4a9a8)
+        ;
+
+        
+    
+    
+            var marker_20bcd06ba8f3019d0eb52a9635eb53be = L.marker(
+                [27.1112083, -82.4347428],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_21a58c63dc8b483f076914cb30900497 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    12\n                \u003c/div\u003e\n            "});
+            marker_20bcd06ba8f3019d0eb52a9635eb53be.setIcon(div_icon_21a58c63dc8b483f076914cb30900497);
+        
+    
+        var popup_36ba10b1b1cb2582e3b6382f24ea08c1 = L.popup({"maxWidth": 320});
+
+        
+            var html_90168113ca95355790824516b578335d = $(`<div id="html_90168113ca95355790824516b578335d" style="width: 100.0%; height: 100.0%;"><b>12. Liard, James Mark & Debra</b><br>638 Bird Bay Dr E Apt 109 Venice, Florida 34285-6222</div>`)[0];
+            popup_36ba10b1b1cb2582e3b6382f24ea08c1.setContent(html_90168113ca95355790824516b578335d);
+        
+
+        marker_20bcd06ba8f3019d0eb52a9635eb53be.bindPopup(popup_36ba10b1b1cb2582e3b6382f24ea08c1)
+        ;
+
+        
+    
+    
+            var marker_c1da3851e39ac24b2e6bbf80765d4ef5 = L.marker(
+                [27.109794, -82.4455492],
+                {}
+            ).addTo(marker_cluster_bcd9d4403e90beab9d9991f509ac9f34);
+        
+    
+            var div_icon_022fa47ae9b5d45cf4b25f8135bad721 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #9f3538; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    13\n                \u003c/div\u003e\n            "});
+            marker_c1da3851e39ac24b2e6bbf80765d4ef5.setIcon(div_icon_022fa47ae9b5d45cf4b25f8135bad721);
+        
+    
+        var popup_ee674279f587ba0de620cd5b226a2519 = L.popup({"maxWidth": 320});
+
+        
+            var html_8ce857b221e13e058d7d9f4451930267 = $(`<div id="html_8ce857b221e13e058d7d9f4451930267" style="width: 100.0%; height: 100.0%;"><b>13. Guerrero, Manuel</b><br>734 Eagle Point Dr Venice, Florida 34285-5002</div>`)[0];
+            popup_ee674279f587ba0de620cd5b226a2519.setContent(html_8ce857b221e13e058d7d9f4451930267);
+        
+
+        marker_c1da3851e39ac24b2e6bbf80765d4ef5.bindPopup(popup_ee674279f587ba0de620cd5b226a2519)
+        ;
+
+        
+    
+</script>
+</html>

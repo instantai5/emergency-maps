@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8513a042e2f393a84144d20b3c131510 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <link href="tooplate-neural-style.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- INSTANT AI 5 Logo -->
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                    <circle cx="25" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="75" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                    
+                    <!-- Connections -->
+                    <line x1="50" y1="28" x2="25" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="28" x2="75" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="25" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="75" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    
+                    <!-- Center node -->
+                    <circle cx="50" cy="50" r="5" fill="#00ffff"/>
+                    <line x1="50" y1="28" x2="50" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="55" x2="50" y2="72" stroke="#ffff00" stroke-width="1" opacity="0.6"/>
+                    <line x1="33" y1="50" x2="45" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="55" y1="50" x2="67" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">INSTANT AI 5</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+<!--                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div style='position: fixed; bottom: 30px; left: 30px; width: 320px; background-color: white; border:2px solid grey; z-index:9999; font-size:12px; color:black; padding: 10px;'><b>Group 20 Members (North → South; West → East)</b><br><hr style='margin:4px 0;'><b>1</b>. Shearer, Philip & Ashley<br><b>2</b>. Shadwick, Mary Anne<br><b>3</b>. Lindenmuth, Dane Tyler Alalaatoa Tolsea<br><b>4</b>. Johnsen, Jeff & Allyson<br><b>5</b>. McMullen, David & Stephanie Lynn<br><b>6</b>. Loomis, Vader<br><b>7</b>. Loomis, Martin Wisner<br></div>
+    
+            <div class="folium-map" id="map_8513a042e2f393a84144d20b3c131510" ></div>
+    <script src="tooplate-neural-scripts.js"></script>
+        
+</body>
+<script>
+    
+    
+            var map_8513a042e2f393a84144d20b3c131510 = L.map(
+                "map_8513a042e2f393a84144d20b3c131510",
+                {
+                    center: [27.02998672857143, -82.40814024285714],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3838cc171dd11f4aff065b40210388bd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8513a042e2f393a84144d20b3c131510);
+        
+    
+            var polygon_66b306904c08462065981efb3cdadf48 = L.polygon(
+                [[27.0235569, -82.3984108], [27.0262257, -82.4108131], [27.0369279, -82.4176353], [27.0342463, -82.4088836], [27.02384, -82.3983626], [27.0235569, -82.3984108]],
+                {"bubblingMouseEvents": true, "color": "#707e29", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#707e29", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_8513a042e2f393a84144d20b3c131510);
+        
+    
+            var marker_cluster_ea40aac12365a07bc6551247d1c45e75 = L.markerClusterGroup(
+                {"showCoverageOnHover": false, "spiderfyOnMaxZoom": true}
+            );
+            map_8513a042e2f393a84144d20b3c131510.addLayer(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var marker_ff263b298321a376722a6c1a27ddab46 = L.marker(
+                [27.0369279, -82.4176353],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_507769c1deac58430a75865b5fc7dba7 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    1\n                \u003c/div\u003e\n            "});
+            marker_ff263b298321a376722a6c1a27ddab46.setIcon(div_icon_507769c1deac58430a75865b5fc7dba7);
+        
+    
+        var popup_0577e4d2545fe9591b54c5ed5864d874 = L.popup({"maxWidth": 320});
+
+        
+            var html_6f4b5fed4a6e209b36d31aabc96f40b8 = $(`<div id="html_6f4b5fed4a6e209b36d31aabc96f40b8" style="width: 100.0%; height: 100.0%;"><b>1. Shearer, Philip & Ashley</b><br>1708 Palmetto Dr Venice, Florida 34293</div>`)[0];
+            popup_0577e4d2545fe9591b54c5ed5864d874.setContent(html_6f4b5fed4a6e209b36d31aabc96f40b8);
+        
+
+        marker_ff263b298321a376722a6c1a27ddab46.bindPopup(popup_0577e4d2545fe9591b54c5ed5864d874)
+        ;
+
+        
+    
+    
+            var marker_6b056dfc4064ebc991c8d65cce95d8ad = L.marker(
+                [27.0342463, -82.4088836],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_78dfccb67bea7af200b9c7d250537043 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    2\n                \u003c/div\u003e\n            "});
+            marker_6b056dfc4064ebc991c8d65cce95d8ad.setIcon(div_icon_78dfccb67bea7af200b9c7d250537043);
+        
+    
+        var popup_4c125b7fb135f73f3dea1daa7f0c646e = L.popup({"maxWidth": 320});
+
+        
+            var html_1ccd3132966aee17f71957fc899de345 = $(`<div id="html_1ccd3132966aee17f71957fc899de345" style="width: 100.0%; height: 100.0%;"><b>2. Shadwick, Mary Anne</b><br>725 Colegate Rd. Venice, Florida 34293</div>`)[0];
+            popup_4c125b7fb135f73f3dea1daa7f0c646e.setContent(html_1ccd3132966aee17f71957fc899de345);
+        
+
+        marker_6b056dfc4064ebc991c8d65cce95d8ad.bindPopup(popup_4c125b7fb135f73f3dea1daa7f0c646e)
+        ;
+
+        
+    
+    
+            var marker_f38f49f3a829a83792bc499c6fd79d85 = L.marker(
+                [27.0342296, -82.4094906],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_5a05c8162fef6b8b7f4f1ebb6b109f16 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    3\n                \u003c/div\u003e\n            "});
+            marker_f38f49f3a829a83792bc499c6fd79d85.setIcon(div_icon_5a05c8162fef6b8b7f4f1ebb6b109f16);
+        
+    
+        var popup_72696bd5656901e95aaf322bfdbe3ed2 = L.popup({"maxWidth": 320});
+
+        
+            var html_fe8efd87b582ce812593b565cdfc6389 = $(`<div id="html_fe8efd87b582ce812593b565cdfc6389" style="width: 100.0%; height: 100.0%;"><b>3. Lindenmuth, Dane Tyler Alalaatoa Tolsea</b><br>755 Colgate Rd Venice, Florida 34293-6412</div>`)[0];
+            popup_72696bd5656901e95aaf322bfdbe3ed2.setContent(html_fe8efd87b582ce812593b565cdfc6389);
+        
+
+        marker_f38f49f3a829a83792bc499c6fd79d85.bindPopup(popup_72696bd5656901e95aaf322bfdbe3ed2)
+        ;
+
+        
+    
+    
+            var marker_236e39837153a437509993850c771351 = L.marker(
+                [27.0308807, -82.4133857],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_ea1753b9c7a6463d35a01129fec8319c = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    4\n                \u003c/div\u003e\n            "});
+            marker_236e39837153a437509993850c771351.setIcon(div_icon_ea1753b9c7a6463d35a01129fec8319c);
+        
+    
+        var popup_3e41cc1712c0da00d7f133a524d27c91 = L.popup({"maxWidth": 320});
+
+        
+            var html_169900cba2842ff289b88af46a1e69d0 = $(`<div id="html_169900cba2842ff289b88af46a1e69d0" style="width: 100.0%; height: 100.0%;"><b>4. Johnsen, Jeff & Allyson</b><br>1016 Panda Rd Venice, Florida 34293</div>`)[0];
+            popup_3e41cc1712c0da00d7f133a524d27c91.setContent(html_169900cba2842ff289b88af46a1e69d0);
+        
+
+        marker_236e39837153a437509993850c771351.bindPopup(popup_3e41cc1712c0da00d7f133a524d27c91)
+        ;
+
+        
+    
+    
+            var marker_cdb316254a60a5611a7d18aff23921e4 = L.marker(
+                [27.0262257, -82.4108131],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_5f0bd4aa940ac80c6ad853db733b549f = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    5\n                \u003c/div\u003e\n            "});
+            marker_cdb316254a60a5611a7d18aff23921e4.setIcon(div_icon_5f0bd4aa940ac80c6ad853db733b549f);
+        
+    
+        var popup_e1c1bb80948a1ff98d17c2862c4bfeed = L.popup({"maxWidth": 320});
+
+        
+            var html_1632f737daa342dbab80c7e48e5e2d75 = $(`<div id="html_1632f737daa342dbab80c7e48e5e2d75" style="width: 100.0%; height: 100.0%;"><b>5. McMullen, David & Stephanie Lynn</b><br>5915 Regent Rd Venice, Florida 34293</div>`)[0];
+            popup_e1c1bb80948a1ff98d17c2862c4bfeed.setContent(html_1632f737daa342dbab80c7e48e5e2d75);
+        
+
+        marker_cdb316254a60a5611a7d18aff23921e4.bindPopup(popup_e1c1bb80948a1ff98d17c2862c4bfeed)
+        ;
+
+        
+    
+    
+            var marker_3bfeff690e03c127a5a5ad95c03c052d = L.marker(
+                [27.02384, -82.3983626],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_77d0530a76ccf2f0b65b72554fc73ff3 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    6\n                \u003c/div\u003e\n            "});
+            marker_3bfeff690e03c127a5a5ad95c03c052d.setIcon(div_icon_77d0530a76ccf2f0b65b72554fc73ff3);
+        
+    
+        var popup_c7f147f88a80072134d9eb5395af7d8d = L.popup({"maxWidth": 320});
+
+        
+            var html_999644d68246ee05206e387348f523dd = $(`<div id="html_999644d68246ee05206e387348f523dd" style="width: 100.0%; height: 100.0%;"><b>6. Loomis, Vader</b><br>5868 Denison Dr Venice, Florida 34293-6802</div>`)[0];
+            popup_c7f147f88a80072134d9eb5395af7d8d.setContent(html_999644d68246ee05206e387348f523dd);
+        
+
+        marker_3bfeff690e03c127a5a5ad95c03c052d.bindPopup(popup_c7f147f88a80072134d9eb5395af7d8d)
+        ;
+
+        
+    
+    
+            var marker_00e60b9fc5c60ba108785ede3988657c = L.marker(
+                [27.0235569, -82.3984108],
+                {}
+            ).addTo(marker_cluster_ea40aac12365a07bc6551247d1c45e75);
+        
+    
+            var div_icon_f750d7b08034a37f922729097f617b09 = L.divIcon({"className": "empty", "html": "\n                \u003cdiv style=\"font-size: 12px; color: white; font-weight: bold;\n                            background-color: #707e29; border-radius: 50%; width: 24px; height: 24px;\n                            text-align: center; line-height: 24px; border: 1px solid black;\"\u003e\n                    7\n                \u003c/div\u003e\n            "});
+            marker_00e60b9fc5c60ba108785ede3988657c.setIcon(div_icon_f750d7b08034a37f922729097f617b09);
+        
+    
+        var popup_c0f7ebcb6ca9351d986f4be83aacba9c = L.popup({"maxWidth": 320});
+
+        
+            var html_485133a13d8eccc860cd19f60660936c = $(`<div id="html_485133a13d8eccc860cd19f60660936c" style="width: 100.0%; height: 100.0%;"><b>7. Loomis, Martin Wisner</b><br>5872 Denison Dr Venice, Florida 34293-6802</div>`)[0];
+            popup_c0f7ebcb6ca9351d986f4be83aacba9c.setContent(html_485133a13d8eccc860cd19f60660936c);
+        
+
+        marker_00e60b9fc5c60ba108785ede3988657c.bindPopup(popup_c0f7ebcb6ca9351d986f4be83aacba9c)
+        ;
+
+        
+    
+</script>
+</html>
